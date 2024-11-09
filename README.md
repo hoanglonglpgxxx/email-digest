@@ -1,1 +1,2 @@
-# Crawl data using newsdata.io and python
+# Simple crawling data app using newsdata.io and python
+VIDEO 5 DAY 27
