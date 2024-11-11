@@ -1,2 +1,3 @@
 # Simple crawling data app using newsdata.io and python
-VIDEO 3 DAY 29
+# Sample abt Flask and routing
+VIDEO 4 DAY 29
