@@ -8,7 +8,11 @@
 <body>
     <h1>Weather Data API</h1>
     <p>URL format: http://127.0.0.1:5000/api/v1/station/date</p>
-    <p>URL example: http://127.0.0.1:5000/api/v1/station/19881025</p>
+    <p>URL example: http://127.0.0.1:5000/api/v1/station</p>
+    <p>URL example: http://127.0.0.1:5000//api/v1/annual/station/year</p>
+    <p>URL example: http://127.0.0.1:5000/api/v1/word</p>
 <!--    <img src="{{url_for('static', filename='img1.jpg')}}" alt="Test image">-->
+    <h1>Stations</h1>
+    <p>{{data|safe}}</p>
 </body>
 </html>
