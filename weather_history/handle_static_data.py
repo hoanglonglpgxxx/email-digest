@@ -2,7 +2,6 @@ import pandas as pd
 import numpy as np
 
 # Read data file, skip first 20 text lines and parse the 'DATE' column as datetime
-df = pd.read_csv('data-small/TG_STAID000001.txt', skiprows=20, parse_dates=['    DATE'])
 
 # Show certain columns
 # print(df.columns) # return cols of data frame
@@ -22,10 +21,36 @@ df = pd.read_csv('data-small/TG_STAID000001.txt', skiprows=20, parse_dates=['   
 # print(df)
 
 
-def handle_data(station):
+def get_temperature(station, date):
     """
-    Read data file from station param
-    :param station:
-    :return: temperature
+        Read data file from the specified weather station and date, and return the temperature.
+
+    :param station: station ID
+    :type station: str
+    :param date: date in 'YYYY-MM-DD' format
+    :type date: str
+    :return: temperature in celsius
+    :rtype: float
     """
-    print(f'data-small/TG_STAID{station.zfill(6)}.txt')
+    file = f'data-small/TG_STAID{str(station).zfill(6)}.txt'
+    df = pd.read_csv(file, skiprows=20, parse_dates=['    DATE'])
+
+    # Get temp of a cell
+    temperature = df.loc[df['    DATE'] == date]['   TG'].squeeze() / 10
+
+    return temperature
+
+def get_word_definition(word):
+    """
+
+    :param word: word
+    :type word: str
+    :return: definition of word
+    :rtype: str
+    """
+    df = pd.read_csv('dictionary.csv')
+    if df.empty:
+        return 'No Meaning'
+    definition = df.loc[df['word'] == word]['definition']
+    print(df.loc[df['word'] == word])
+    return definition.squeeze() if not definition.empty else 'No Meaning'

@@ -1,6 +1,6 @@
 from flask import Flask, render_template
 import pandas as pd
-from handle_static_data import handle_data
+from handle_static_data import get_temperature, get_word_definition
 
 app = Flask(__name__)
 
@@ -9,8 +9,7 @@ def home():
     return render_template('index.html')
 @app.route('/api/v1/<station>/<date>')
 def about(station, date):
-    temperature = 25
-    handle_data(station)
+    temperature = get_temperature(station, date)
     return {
         'station': station,
         'date': date,
@@ -19,9 +18,10 @@ def about(station, date):
 
 @app.route('/api/v1/<word>')
 def handle(word):
+    definition = get_word_definition(word)
     return {
         'word': word,
-        'definition': 'test'
+        'definition': definition
     }
 
 if __name__ == '__main__':
