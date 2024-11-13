@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1a0bb982-edb8-48b8-92e7-487c6908fde0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/weather_history/dictionary.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/weather_history/handle_static_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/weather_history/handle_static_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weather_history/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/weather_history/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/weather_history/weather_history.py" beforeDir="false" afterPath="$PROJECT_DIR$/weather_history/weather_history.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -106,7 +107,7 @@
       <workItem from="1731311736937" duration="5337000" />
       <workItem from="1731321450680" duration="16000" />
       <workItem from="1731402664416" duration="5103000" />
-      <workItem from="1731469065823" duration="2966000" />
+      <workItem from="1731469065823" duration="12035000" />
     </task>
     <servers />
   </component>
@@ -116,8 +117,8 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/email_digest$main.coverage" NAME="main Coverage Results" MODIFIED="1731140901948" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/email_digest$samp.coverage" NAME="samp Coverage Results" MODIFIED="1731319251589" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/weather_history" />
-    <SUITE FILE_PATH="coverage/email_digest$handle_static_data.coverage" NAME="handle_static_data Coverage Results" MODIFIED="1731472386492" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/weather_history" />
-    <SUITE FILE_PATH="coverage/email_digest$weather_history.coverage" NAME="weather_history Coverage Results" MODIFIED="1731472390632" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/weather_history" />
+    <SUITE FILE_PATH="coverage/email_digest$handle_static_data.coverage" NAME="handle_static_data Coverage Results" MODIFIED="1731491952900" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/weather_history" />
+    <SUITE FILE_PATH="coverage/email_digest$weather_history.coverage" NAME="weather_history Coverage Results" MODIFIED="1731491962079" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/weather_history" />
     <SUITE FILE_PATH="coverage/email_digest$send_email.coverage" NAME="send_email Coverage Results" MODIFIED="1731140473011" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/email_digest$astro_api.coverage" NAME="astro_api Coverage Results" MODIFIED="1731318305618" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
