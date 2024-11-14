@@ -5,11 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1a0bb982-edb8-48b8-92e7-487c6908fde0" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/population_research/data_handling.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/population_research/happy.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/population_research/population.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weather_forecast/get_response.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weather_history/handle_static_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/weather_history/handle_static_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weather_history/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/weather_history/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weather_history/weather_history.py" beforeDir="false" afterPath="$PROJECT_DIR$/weather_history/weather_history.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weather_forecast/weather_forecast.py" beforeDir="false" afterPath="$PROJECT_DIR$/weather_forecast/weather_forecast.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weather_history/dictionary.csv" beforeDir="false" afterPath="$PROJECT_DIR$/weather_history/dictionary.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,15 +61,18 @@
     "HTTP Request.All in generated-requests.executor": "Run",
     "JavaScript Debug.index.html.executor": "Run",
     "Python.astro_api.executor": "Run",
+    "Python.data_handling.executor": "Run",
+    "Python.get_response.executor": "Run",
     "Python.handle_static_data.executor": "Run",
     "Python.main.executor": "Run",
     "Python.samp.executor": "Run",
     "Python.send_email.executor": "Run",
+    "Python.weather_forecast.executor": "Run",
     "Python.weather_history.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "dart.analysis.tool.window.visible": "false",
     "git-widget-placeholder": "preprod",
-    "last_opened_file_path": "F:/email-digest/weather_history",
+    "last_opened_file_path": "F:/email-digest/population_research",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -78,12 +84,13 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\email-digest\population_research" />
       <recent name="F:\email-digest\weather_history" />
       <recent name="F:\email-digest\weather_history\static" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\email-digest\weather_history" />
       <recent name="F:\email-digest" />
+      <recent name="F:\email-digest\weather_history" />
       <recent name="F:\email-digest\weather_history\templates" />
     </key>
   </component>
@@ -107,7 +114,8 @@
       <workItem from="1731311736937" duration="5337000" />
       <workItem from="1731321450680" duration="16000" />
       <workItem from="1731402664416" duration="5103000" />
-      <workItem from="1731469065823" duration="12035000" />
+      <workItem from="1731469065823" duration="14234000" />
+      <workItem from="1731569821774" duration="8286000" />
     </task>
     <servers />
   </component>
@@ -115,11 +123,14 @@
     <option name="version" value="3" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/email_digest$weather_forecast.coverage" NAME="weather_forecast Coverage Results" MODIFIED="1731571113791" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/weather_forecast" />
     <SUITE FILE_PATH="coverage/email_digest$main.coverage" NAME="main Coverage Results" MODIFIED="1731140901948" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/email_digest$samp.coverage" NAME="samp Coverage Results" MODIFIED="1731319251589" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/weather_history" />
+    <SUITE FILE_PATH="coverage/email_digest$get_response.coverage" NAME="get_response Coverage Results" MODIFIED="1731574685826" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/weather_forecast" />
     <SUITE FILE_PATH="coverage/email_digest$handle_static_data.coverage" NAME="handle_static_data Coverage Results" MODIFIED="1731491952900" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/weather_history" />
     <SUITE FILE_PATH="coverage/email_digest$weather_history.coverage" NAME="weather_history Coverage Results" MODIFIED="1731491962079" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/weather_history" />
     <SUITE FILE_PATH="coverage/email_digest$send_email.coverage" NAME="send_email Coverage Results" MODIFIED="1731140473011" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/email_digest$data_handling.coverage" NAME="data_handling Coverage Results" MODIFIED="1731575951619" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/population_research" />
     <SUITE FILE_PATH="coverage/email_digest$astro_api.coverage" NAME="astro_api Coverage Results" MODIFIED="1731318305618" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
