@@ -1,7 +1,7 @@
-# Simple crawling data app using newsdata.io and python
+# Simple crawling data app using `newsdata.io` API and python
 # Sample abt Flask and routing
-# Simple weather forecase
-VIDEO 1 DAY 33
+# Simple weather forecast
+VIDEO 1 DAY 34
 ## NOTE LẠI
 - List Comprehension 
 - Trong Python, List Comprehension là cách ngắn gọn để tạo danh sách mới bằng cách lặp qua một danh sách hoặc iterable khác. Cú pháp cơ bản là:
@@ -30,3 +30,5 @@ Nói cách khác, dòng code này sẽ duyệt qua từng phần tử (dictionar
 | `str `         | `string`                                    | Chuỗi ký tự không thay đổi.                                          |
 | `None`         | `null`                                      | Đại diện cho giá trị không tồn tại hoặc giá trị rỗng.                |
 | `True`/`False` | `true`/`false`                               | Giá trị boolean cho đúng/sai.                                        |
+
+- `dictionary comprehension`
