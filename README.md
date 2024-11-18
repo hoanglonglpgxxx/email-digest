@@ -3,7 +3,7 @@
 # Simple weather forecast
 # Handle natural language
 # Multi func tool: convert files to other ext, zip, unzip files, ...
-VIDEO 1 DAY 35
+VIDEO 1 DAY 36
 ## NOTE LẠI
 - List Comprehension 
 - Trong Python, List Comprehension là cách ngắn gọn để tạo danh sách mới bằng cách lặp qua một danh sách hoặc iterable khác. Cú pháp cơ bản là:
