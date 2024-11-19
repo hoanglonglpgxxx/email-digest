@@ -1,7 +1,11 @@
 # Simple crawling data app using `newsdata.io` API and python
 # Sample abt Flask and routing
 # Simple weather forecast
-VIDEO 1 DAY 34
+# Handle natural language
+# Multi func tool: convert files to other ext by tkinter, zip, unzip files, ...
+VIDEO 5 DAY 37
+
+## USE ESP32 AS EXTERNAL CAM!!! 
 ## NOTE LẠI
 - List Comprehension 
 - Trong Python, List Comprehension là cách ngắn gọn để tạo danh sách mới bằng cách lặp qua một danh sách hoặc iterable khác. Cú pháp cơ bản là:
