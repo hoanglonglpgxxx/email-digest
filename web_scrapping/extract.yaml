@@ -1,0 +1,14 @@
+articles:
+  css: '.article-item'
+  multiple: true
+  children:
+    title:
+      css: '.article-title .dt-text-black-mine'
+      text: true
+    content:
+      css: '.article-excerpt a'
+      text: true
+    href:
+      css: '.article-title .dt-text-black-mine'
+      type: Attribute
+      attribute: href

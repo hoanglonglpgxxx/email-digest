@@ -5,15 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1a0bb982-edb8-48b8-92e7-487c6908fde0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/computer_vision/emailing.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/computer_vision/image.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/computer_vision/image2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/computer_vision/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/computer_vision/read.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/multi_func_tool/file_converter.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/multi_func_tool/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web_scrapping/extract.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web_scrapping/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/computer_vision/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/computer_vision/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,7 +119,8 @@
       <workItem from="1731569821774" duration="9237000" />
       <workItem from="1731640126686" duration="16196000" />
       <workItem from="1731901163790" duration="16058000" />
-      <workItem from="1731988600097" duration="3543000" />
+      <workItem from="1731988600097" duration="5153000" />
+      <workItem from="1732093216339" duration="5193000" />
     </task>
     <servers />
   </component>
@@ -133,7 +130,7 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/email_digest$weather_forecast.coverage" NAME="weather_forecast Coverage Results" MODIFIED="1731571113791" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/weather_forecast" />
     <SUITE FILE_PATH="coverage/email_digest$samp.coverage" NAME="samp Coverage Results" MODIFIED="1731319251589" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/weather_history" />
-    <SUITE FILE_PATH="coverage/email_digest$main.coverage" NAME="main Coverage Results" MODIFIED="1731988958652" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/computer_vision" />
+    <SUITE FILE_PATH="coverage/email_digest$main.coverage" NAME="main Coverage Results" MODIFIED="1732098575387" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/web_scrapping" />
     <SUITE FILE_PATH="coverage/email_digest$get_response.coverage" NAME="get_response Coverage Results" MODIFIED="1731657615643" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/weather_forecast" />
     <SUITE FILE_PATH="coverage/email_digest$handle_static_data.coverage" NAME="handle_static_data Coverage Results" MODIFIED="1731491952900" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/weather_history" />
     <SUITE FILE_PATH="coverage/email_digest$weather_history.coverage" NAME="weather_history Coverage Results" MODIFIED="1731491962079" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/weather_history" />

@@ -2,6 +2,7 @@
 import os
 import cv2
 import time, glob
+from threading import Thread
 from emailing import send_email
 
 video = cv2.VideoCapture(0)
@@ -57,8 +58,15 @@ while True:
 
     # Catch event when object out of view
     if status_list[0] == 1 and status_list[1] == 0:
-        send_email(img_with_obj)
-        clean_folder()
+        # Make send_email run background so not affect displaying frame
+        email_thread = Thread(target = send_email, args = (img_with_obj, ))
+        email_thread.daemon = True
+
+        # Make clean_folder run background so not affect displaying frame
+        clean_thread = Thread(target = clean_folder)
+        clean_thread.daemon = True
+
+        email_thread.start()
 
     # Draw rectangle around object
     cv2.imshow('Video', frame)
@@ -70,3 +78,4 @@ while True:
         break
 
 video.release()
+clean_thread.start()
