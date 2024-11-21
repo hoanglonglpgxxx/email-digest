@@ -1,9 +1,13 @@
 # Scrapping data from web
+from time import strftime
+from underthesea import sentiment
 import requests
 import selectorlib
+from send_email import send
 
 URL = 'https://programmer100.pythonanywhere.com/tours/'
 CHUNG_KHOAN = 'https://dantri.com.vn/kinh-doanh/chung-khoan.htm'
+BASE_DOMAIN = 'https://dantri.com.vn'
 HEADERS={
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36'
 }
@@ -11,13 +15,28 @@ HEADERS={
 def scrape(url):
     response = requests.get(url, headers=HEADERS)
     source = response.text
-    return source
-
-def extract(source):
     extractor = selectorlib.Extractor.from_yaml_file('extract.yaml')
-    values = extractor.extract(source)
-    return values['articles']
+    datas = extractor.extract(source)
+    return datas['articles']
+
+def extract(datas):
+    content = ''
+    for data in datas:
+        data['href'] = BASE_DOMAIN + data['href']
+        data['sentiment'] = 'Tích cực' if sentiment(data['title']) == 'positive' else 'Tiêu cực'
+        content+= f"""
+            Tiêu đề: {data['title']}
+            Nội dung: {data['content']}
+            Link: {data['href']}
+            Đánh giá: {data['sentiment']}
+            """
+    return content
 
 if __name__ == '__main__':
     data = scrape(CHUNG_KHOAN)
-    print(extract(data))
+    content = f"""\
+Subject: Today hot news - {strftime('%d %b %Y')}
+
+{extract(data)}
+"""
+    send('hoanglonglpgxxx@gmail.com', content)
