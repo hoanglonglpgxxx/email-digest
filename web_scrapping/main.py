@@ -1,6 +1,5 @@
 # Scrapping data from web
 from time import strftime
-from underthesea import sentiment
 import requests
 import selectorlib
 from send_email import send
@@ -23,12 +22,10 @@ def extract(datas):
     content = ''
     for data in datas:
         data['href'] = BASE_DOMAIN + data['href']
-        data['sentiment'] = 'Tích cực' if sentiment(data['title']) == 'positive' else 'Tiêu cực'
         content+= f"""
             Tiêu đề: {data['title']}
             Nội dung: {data['content']}
             Link: {data['href']}
-            Đánh giá: {data['sentiment']}
             """
     return content
 
