@@ -7,6 +7,11 @@ class Hotel:
         self.name = df.loc[df['id'] == self.hotel_id, 'name'].squeeze()
 
     def book(self):
+        """
+        Book a hotel by changing its availability to NO
+        :return:
+        :rtype:
+        """
         df.loc[df['id'] == self.hotel_id, 'available'] = 'no'
         df.to_csv('hotels.csv', index=False)
 

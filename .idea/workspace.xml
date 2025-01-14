@@ -5,15 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1a0bb982-edb8-48b8-92e7-487c6908fde0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/hotel_booking/hotel.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hotel_booking/hotels.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hotel_booking/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hotel_booking/reservationticket.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hotel_booking/user.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/email-digest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/email-digest.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel_booking/hotel.py" beforeDir="false" afterPath="$PROJECT_DIR$/hotel_booking/hotel.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,48 +55,48 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "HTTP Request.All in generated-requests.executor": "Run",
-    "JavaScript Debug.index.html.executor": "Run",
-    "Python tests.Doctests in __init__.executor": "Run",
-    "Python tests.Doctests in validation.executor": "Run",
-    "Python tests.Python tests in test.py.executor": "Run",
-    "Python.__init__.executor": "Run",
-    "Python.astro_api.executor": "Run",
-    "Python.data_handling.executor": "Run",
-    "Python.file_converter.executor": "Run",
-    "Python.get_response.executor": "Debug",
-    "Python.handle_static_data.executor": "Run",
-    "Python.hotel.executor": "Run",
-    "Python.main.executor": "Run",
-    "Python.read.executor": "Run",
-    "Python.samp.executor": "Run",
-    "Python.send_email.executor": "Run",
-    "Python.test.executor": "Run",
-    "Python.weather_forecast.executor": "Run",
-    "Python.weather_history.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "preprod",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "F:/email-digest/computer_vision",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;HTTP Request.All in generated-requests.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.index.html.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Doctests in __init__.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Doctests in validation.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in test.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python.__init__.executor&quot;: &quot;Run&quot;,
+    &quot;Python.astro_api.executor&quot;: &quot;Run&quot;,
+    &quot;Python.data_handling.executor&quot;: &quot;Run&quot;,
+    &quot;Python.file_converter.executor&quot;: &quot;Run&quot;,
+    &quot;Python.get_response.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.handle_static_data.executor&quot;: &quot;Run&quot;,
+    &quot;Python.hotel.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.read.executor&quot;: &quot;Run&quot;,
+    &quot;Python.samp.executor&quot;: &quot;Run&quot;,
+    &quot;Python.send_email.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.weather_forecast.executor&quot;: &quot;Run&quot;,
+    &quot;Python.weather_history.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;preprod&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/email-digest&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.sync&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\email-digest" />
       <recent name="F:\email-digest\computer_vision" />
       <recent name="F:\email-digest\multi_func_tool" />
       <recent name="F:\email-digest\nlp_diary" />
       <recent name="F:\email-digest\natural_lang" />
-      <recent name="F:\email-digest\population_research" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\email-digest" />
@@ -144,6 +137,10 @@
       <workItem from="1732203993572" duration="33000" />
       <workItem from="1732204043030" duration="301000" />
       <workItem from="1732204354633" duration="310000" />
+      <workItem from="1732506947652" duration="133000" />
+      <workItem from="1735385171096" duration="678000" />
+      <workItem from="1736757667825" duration="1899000" />
+      <workItem from="1736818105056" duration="2908000" />
     </task>
     <servers />
   </component>
@@ -174,10 +171,10 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/email_digest$weather_forecast.coverage" NAME="weather_forecast Coverage Results" MODIFIED="1731571113791" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/weather_forecast" />
-    <SUITE FILE_PATH="coverage/email_digest$main.coverage" NAME="main Coverage Results" MODIFIED="1732356276479" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/hotel_booking" />
+    <SUITE FILE_PATH="coverage/email_digest$main.coverage" NAME="main Coverage Results" MODIFIED="1736827553358" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/hotel_booking" />
     <SUITE FILE_PATH="coverage/email_digest$weather_history.coverage" NAME="weather_history Coverage Results" MODIFIED="1731491962079" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/weather_history" />
     <SUITE FILE_PATH="coverage/email_digest$Doctests_in_validation.coverage" NAME="Doctests in validation Coverage Results" MODIFIED="1732202569257" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/AppData/Local/Packages/PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0/LocalCache/local-packages/Python311/site-packages/sklearn/utils" />
-    <SUITE FILE_PATH="coverage/email_digest$test.coverage" NAME="test Coverage Results" MODIFIED="1732203290396" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/web_scrapping" />
+    <SUITE FILE_PATH="coverage/email_digest$test.coverage" NAME="test Coverage Results" MODIFIED="1735385821509" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/email_digest$file_converter.coverage" NAME="file_converter Coverage Results" MODIFIED="1731922134625" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/multi_func_tool" />
     <SUITE FILE_PATH="coverage/email_digest$data_handling.coverage" NAME="data_handling Coverage Results" MODIFIED="1731575951619" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/population_research" />
     <SUITE FILE_PATH="coverage/email_digest$astro_api.coverage" NAME="astro_api Coverage Results" MODIFIED="1731318305618" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
