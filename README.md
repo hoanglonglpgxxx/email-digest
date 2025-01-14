@@ -3,7 +3,7 @@
 # Simple weather forecast
 # Handle natural language
 # Multi func tool: convert files to other ext by tkinter, zip, unzip files, ...
-VIDEO 8 DAY 41
+DONE: ALL VIDEO DAY 41
 
 ## USE ESP32 AS EXTERNAL CAM!!! 
 ## NOTE LẠI

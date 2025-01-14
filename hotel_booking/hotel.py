@@ -21,6 +21,7 @@ class Hotel:
         :return: True or False
         :rtype: bool
         """
+        if len(df.loc[df['id'] == self.hotel_id, 'available']) < 1 : return False
         availability = df.loc[df['id'] == self.hotel_id, 'available'].squeeze()
         if availability == 'yes':
             return True
