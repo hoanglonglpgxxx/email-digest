@@ -11,3 +11,7 @@ if hotel.available():
     print(reservation_ticket.generate())
 else:
     print('Hotel is not available!')
+
+
+#instance variable: value giữa các instace của class khác nhau
+#class variable: value giữa các instance của class giống nhau
