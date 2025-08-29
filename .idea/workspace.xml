@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1a0bb982-edb8-48b8-92e7-487c6908fde0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/connect_sql/data.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/connect_sql/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/computer_vision/face_detection.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/computer_vision/face_recog.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +26,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -61,9 +66,11 @@
     &quot;Python.__init__.executor&quot;: &quot;Run&quot;,
     &quot;Python.astro_api.executor&quot;: &quot;Run&quot;,
     &quot;Python.data_handling.executor&quot;: &quot;Run&quot;,
+    &quot;Python.face_recog.executor&quot;: &quot;Run&quot;,
     &quot;Python.file_converter.executor&quot;: &quot;Run&quot;,
     &quot;Python.get_response.executor&quot;: &quot;Debug&quot;,
     &quot;Python.handle_static_data.executor&quot;: &quot;Run&quot;,
+    &quot;Python.hotel.executor&quot;: &quot;Run&quot;,
     &quot;Python.main.executor&quot;: &quot;Run&quot;,
     &quot;Python.read.executor&quot;: &quot;Run&quot;,
     &quot;Python.samp.executor&quot;: &quot;Run&quot;,
@@ -75,23 +82,23 @@
     &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;preprod&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;F:/email-digest/computer_vision&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/email-digest&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.sync&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\email-digest" />
       <recent name="F:\email-digest\computer_vision" />
       <recent name="F:\email-digest\multi_func_tool" />
       <recent name="F:\email-digest\nlp_diary" />
       <recent name="F:\email-digest\natural_lang" />
-      <recent name="F:\email-digest\population_research" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\email-digest" />
@@ -99,6 +106,60 @@
       <recent name="F:\email-digest\weather_history" />
       <recent name="F:\email-digest\weather_history\templates" />
     </key>
+  </component>
+  <component name="RunManager" selected="Python.face_recog">
+    <configuration name="face_recog" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="email-digest" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/computer_vision" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/computer_vision/face_recog.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="email-digest" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/computer_vision" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/computer_vision/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.face_recog" />
+        <item itemvalue="Python.main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -132,6 +193,27 @@
       <workItem from="1732203993572" duration="33000" />
       <workItem from="1732204043030" duration="301000" />
       <workItem from="1732204354633" duration="310000" />
+      <workItem from="1732506947652" duration="133000" />
+      <workItem from="1735385171096" duration="678000" />
+      <workItem from="1736757667825" duration="1899000" />
+      <workItem from="1736818105056" duration="7662000" />
+      <workItem from="1737441281753" duration="4780000" />
+      <workItem from="1737512223022" duration="2000" />
+      <workItem from="1737531136526" duration="593000" />
+      <workItem from="1739324109491" duration="50000" />
+      <workItem from="1739409854745" duration="594000" />
+      <workItem from="1739843199490" duration="27000" />
+      <workItem from="1740221704081" duration="100000" />
+      <workItem from="1740450097560" duration="593000" />
+      <workItem from="1741311809594" duration="17000" />
+      <workItem from="1741676163495" duration="6000" />
+      <workItem from="1741917401239" duration="11000" />
+      <workItem from="1748829997455" duration="5000" />
+      <workItem from="1751885733672" duration="593000" />
+      <workItem from="1752119642276" duration="710000" />
+      <workItem from="1752122155054" duration="2047000" />
+      <workItem from="1754045508543" duration="1000" />
+      <workItem from="1756450153664" duration="864000" />
     </task>
     <servers />
   </component>
@@ -162,10 +244,11 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/email_digest$weather_forecast.coverage" NAME="weather_forecast Coverage Results" MODIFIED="1731571113791" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/weather_forecast" />
-    <SUITE FILE_PATH="coverage/email_digest$main.coverage" NAME="main Coverage Results" MODIFIED="1732351745931" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/connect_sql" />
+    <SUITE FILE_PATH="coverage/email_digest$main.coverage" NAME="main Coverage Results" MODIFIED="1756450604548" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/computer_vision" />
     <SUITE FILE_PATH="coverage/email_digest$weather_history.coverage" NAME="weather_history Coverage Results" MODIFIED="1731491962079" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/weather_history" />
     <SUITE FILE_PATH="coverage/email_digest$Doctests_in_validation.coverage" NAME="Doctests in validation Coverage Results" MODIFIED="1732202569257" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/AppData/Local/Packages/PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0/LocalCache/local-packages/Python311/site-packages/sklearn/utils" />
-    <SUITE FILE_PATH="coverage/email_digest$test.coverage" NAME="test Coverage Results" MODIFIED="1732203290396" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/web_scrapping" />
+    <SUITE FILE_PATH="coverage/email_digest$face_recog.coverage" NAME="face_recog Coverage Results" MODIFIED="1756450858478" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/computer_vision" />
+    <SUITE FILE_PATH="coverage/email_digest$test.coverage" NAME="test Coverage Results" MODIFIED="1735385821509" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/email_digest$file_converter.coverage" NAME="file_converter Coverage Results" MODIFIED="1731922134625" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/multi_func_tool" />
     <SUITE FILE_PATH="coverage/email_digest$data_handling.coverage" NAME="data_handling Coverage Results" MODIFIED="1731575951619" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/population_research" />
     <SUITE FILE_PATH="coverage/email_digest$astro_api.coverage" NAME="astro_api Coverage Results" MODIFIED="1731318305618" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -177,5 +260,6 @@
     <SUITE FILE_PATH="coverage/email_digest$send_email.coverage" NAME="send_email Coverage Results" MODIFIED="1731140473011" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/email_digest$.coverage" NAME=" Coverage Results" MODIFIED="1732202978482" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/web_scrapping" />
     <SUITE FILE_PATH="coverage/email_digest$read.coverage" NAME="read Coverage Results" MODIFIED="1731922924900" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/computer_vision" />
+    <SUITE FILE_PATH="coverage/email_digest$hotel.coverage" NAME="hotel Coverage Results" MODIFIED="1732355731295" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/hotel_booking" />
   </component>
 </project>

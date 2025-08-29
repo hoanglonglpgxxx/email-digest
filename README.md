@@ -1,9 +1,8 @@
 # Simple crawling data app using `newsdata.io` API and python
 # Sample abt Flask and routing
-# Simple weather forecast
 # Handle natural language
 # Multi func tool: convert files to other ext by tkinter, zip, unzip files, ...
-VIDEO 1 DAY 40
+DONE: VIDEO 3 DAY 43
 
 ## USE ESP32 AS EXTERNAL CAM!!! 
 ## NOTE LẠI
