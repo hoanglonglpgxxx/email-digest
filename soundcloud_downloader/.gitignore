@@ -1,0 +1,6 @@
+*.pyc
+__pycache__/
+*.env
+*.sqlite
+/.venv
+tmp_*.mp3
