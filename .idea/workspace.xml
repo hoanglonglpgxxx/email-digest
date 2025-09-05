@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a0bb982-edb8-48b8-92e7-487c6908fde0" name="Changes" comment="up soundcloud_downloader">
+    <list default="true" id="1a0bb982-edb8-48b8-92e7-487c6908fde0" name="Changes" comment="up stock_crawler demo">
+      <change afterPath="$PROJECT_DIR$/stock_crawler/gia_lich_su_ohlcv_ACB.xlsx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/stock_crawler/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -265,7 +266,7 @@
       <workItem from="1756450153664" duration="864000" />
       <workItem from="1756451054239" duration="138000" />
       <workItem from="1756524455321" duration="5466000" />
-      <workItem from="1757046287394" duration="1556000" />
+      <workItem from="1757046287394" duration="1975000" />
     </task>
     <task id="LOCAL-00001" summary="upupup">
       <option name="closed" value="true" />
@@ -283,7 +284,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756528648007</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="up stock_crawler demo">
+      <option name="closed" value="true" />
+      <created>1757048358359</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1757048358359</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -303,7 +312,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="upupup" />
     <MESSAGE value="up soundcloud_downloader" />
-    <option name="LAST_COMMIT_MESSAGE" value="up soundcloud_downloader" />
+    <MESSAGE value="up stock_crawler demo" />
+    <option name="LAST_COMMIT_MESSAGE" value="up stock_crawler demo" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
