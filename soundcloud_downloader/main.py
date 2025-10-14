@@ -1,4 +1,4 @@
-# main.py (multi-link version)
+# main.py (with Client ID input)
 import streamlit as st
 import requests
 import tempfile
@@ -8,16 +8,37 @@ import shlex
 from pathlib import Path
 
 # ---------- Config ----------
-CLIENT_ID = "OeDHpok8199e6vW8pnF7SljVEa4tYz6z"  # fixed as requested
+# MODIFIED: We no longer hardcode the client_id here.
 API_BASE = "https://api-v2.soundcloud.com"
 USER_AGENT = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0"
 # ----------------------------
 
-st.set_page_config(page_title="SoundCloud Downloader — Multi", page_icon="🎵", layout="centered")
-st.title("🎵 SoundCloud Downloader — Multi")
-st.caption("Paste one or more SoundCloud URLs (one per line). Respect copyrights.")
+st.set_page_config(page_title="SoundCloud Downloader", page_icon="🎵", layout="centered")
+st.title("🎵 SoundCloud Downloader")
+st.caption("Paste SoundCloud URLs and your Client ID. Respect copyrights.")
 
-# MODIFIED: Use st.text_area for multiple URLs
+# NEW: Add an input field for the Client ID
+st.subheader("1. Enter your SoundCloud Client ID")
+client_id_input = st.text_input(
+    "SoundCloud Client ID",
+    placeholder="Paste your Client ID here",
+    help="This is required for the app to communicate with SoundCloud's API."
+)
+
+with st.expander("How to find your Client ID?"):
+    st.info("""
+    SoundCloud periodically changes its public `client_id`. If the app stops working, you'll need a new one.
+    1.  Open **SoundCloud.com** in a new browser tab.
+    2.  Press **F12** to open Developer Tools.
+    3.  Click the **Network** tab.
+    4.  In the filter box, type `client_id`.
+    5.  Refresh the SoundCloud page. A request should appear in the network log.
+    6.  Click the request and find the full **Request URL**.
+    7.  Copy the long alphanumeric string from the `client_id=` parameter and paste it above.
+    """)
+
+# MODIFIED: Changed header to reflect the new step-by-step flow
+st.subheader("2. Paste Track URLs")
 urls_input = st.text_area(
     "SoundCloud track URLs (one per line)",
     placeholder="https://soundcloud.com/artist/track1\nhttps://soundcloud.com/artist/track2"
@@ -37,7 +58,11 @@ def resolve_track(url, client_id):
         j = r.json()
         return j if j.get("kind") == "track" else None
     except requests.exceptions.RequestException as e:
-        st.warning(f"Could not resolve '{url}': {e}")
+        # Check specifically for 401 Unauthorized
+        if e.response and e.response.status_code == 401:
+            st.warning(f"The provided Client ID is invalid or has expired. Please find a new one.")
+        else:
+            st.warning(f"Could not resolve '{url}': {e}")
         return None
     except Exception as e:
         st.warning(f"An unexpected error occurred while resolving '{url}': {e}")
@@ -60,7 +85,6 @@ def find_stream_url(track_json, client_id):
     if not media: return None, None
     transcodings = media.get("transcodings", [])
 
-    # Prefer progressive
     for t in transcodings:
         if t.get("format", {}).get("protocol") == "progressive":
             try:
@@ -70,7 +94,6 @@ def find_stream_url(track_json, client_id):
             except Exception:
                 continue
 
-    # Fallback to HLS
     for t in transcodings:
         if "hls" in t.get("format", {}).get("protocol", ""):
             try:
@@ -113,7 +136,6 @@ def ffmpeg_hls_to_mp3(hls_url, out_path):
 
 
 def cleanup_old_files():
-    # MODIFIED: Clear the list of old files and delete them from disk
     for title, path in st.session_state.downloaded_files:
         if path and os.path.exists(path):
             try:
@@ -123,15 +145,17 @@ def cleanup_old_files():
     st.session_state.downloaded_files = []
 
 
-# MODIFIED: Main button logic to handle multiple URLs
+# MODIFIED: Changed header to reflect the new step-by-step flow
+st.subheader("3. Fetch and Download")
 if st.button("Fetch & Download All"):
-    cleanup_old_files()  # Clean up files from any previous run
-
-    urls = [url.strip() for url in urls_input.strip().split('\n') if url.strip()]
-
-    if not urls:
-        st.error("Please paste at least one SoundCloud URL.")
+    # NEW: Validate inputs first
+    if not client_id_input:
+        st.error("❌ Please provide a SoundCloud Client ID first.")
+    elif not urls_input:
+        st.error("❌ Please paste at least one SoundCloud URL.")
     else:
+        cleanup_old_files()
+        urls = [url.strip() for url in urls_input.strip().split('\n') if url.strip()]
         progress_bar = st.progress(0)
         total_urls = len(urls)
         processed_files = []
@@ -140,18 +164,20 @@ if st.button("Fetch & Download All"):
             st.markdown("---")
             st.info(f"**Processing URL {i + 1}/{total_urls}**: `{url}`")
 
-            track = resolve_track(url, CLIENT_ID)
+            # MODIFIED: Pass the client_id from the input field
+            track = resolve_track(url, client_id_input)
             if not track:
-                st.error("Could not resolve track. It might be private or the URL is incorrect.")
                 progress_bar.progress((i + 1) / total_urls)
-                continue
+                continue  # Error messages are handled inside resolve_track
 
             track_id = track.get("id")
-            track_json = get_track_json_by_id(track_id, CLIENT_ID) if track_id else track
+            # MODIFIED: Pass the client_id from the input field
+            track_json = get_track_json_by_id(track_id, client_id_input) if track_id else track
             title = (track_json or track).get("title", "track")
 
             with st.spinner(f"Finding stream for '{title}'..."):
-                stream_url, proto = find_stream_url(track_json, CLIENT_ID)
+                # MODIFIED: Pass the client_id from the input field
+                stream_url, proto = find_stream_url(track_json, client_id_input)
 
             if not stream_url:
                 st.error(f"Couldn't find a downloadable stream for '{title}'.")
@@ -165,7 +191,7 @@ if st.button("Fetch & Download All"):
                 with st.spinner("Downloading directly..."):
                     tmp_path = download_url_to_tempfile(stream_url)
             else:  # hls
-                with st.spinner("Converting HLS stream with ffmpeg (this can take a while)..."):
+                with st.spinner("Converting HLS stream with ffmpeg..."):
                     safe_name = "".join(c for c in title if c.isalnum() or c in " -_").strip()[:80] or "track"
                     out_path = Path(tempfile.gettempdir()) / f"{safe_name}.mp3"
                     ok, ffout = ffmpeg_hls_to_mp3(stream_url, str(out_path))
@@ -183,10 +209,9 @@ if st.button("Fetch & Download All"):
 
         st.session_state.downloaded_files = processed_files
         st.markdown("---")
-        if not processed_files:
-            st.warning("No tracks were successfully processed.")
+        if not processed_files and urls:
+            st.warning("No tracks were successfully processed. Check the error messages above.")
 
-# MODIFIED: Display download buttons for all successfully processed files
 if st.session_state.downloaded_files:
     st.header("Your Downloads Are Ready")
     for file_info in st.session_state.downloaded_files:
@@ -204,13 +229,8 @@ if st.session_state.downloaded_files:
                         data=f.read(),
                         file_name=file_name,
                         mime="audio/mpeg",
-                        key=f"dl_{path}"  # Unique key for each button
+                        key=f"dl_{path}"
                     )
             except Exception as e:
                 st.error(f"Failed to create download button for '{title}': {e}")
-
-    # The files are kept on the server until the next run, which calls cleanup_old_files()
-    st.caption("Files will be removed from the server on your next 'Fetch & Download' run.")
-
-st.markdown("---")
-st.caption("If a track fails, it might be private, region-locked, or use an unsupported format.")
+    st.caption("Files will be removed from the server on your next run.")
