@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1a0bb982-edb8-48b8-92e7-487c6908fde0" name="Changes" comment="up stock_crawler demo">
-      <change afterPath="$PROJECT_DIR$/stock_crawler/gia_lich_su_ohlcv_ACB.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock_crawler/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stock_crawler/handlebase64.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stock_crawler/paste.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -43,6 +43,16 @@
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/hoanglonglpgxxx/email-digest.git&quot;,
     &quot;accountId&quot;: &quot;ea2d8ef1-0998-4b40-abdd-26b60041e0fd&quot;
+  },
+  &quot;recentNewPullRequestHead&quot;: {
+    &quot;server&quot;: {
+      &quot;useHttp&quot;: false,
+      &quot;host&quot;: &quot;github.com&quot;,
+      &quot;port&quot;: null,
+      &quot;suffix&quot;: null
+    },
+    &quot;owner&quot;: &quot;hoanglonglpgxxx&quot;,
+    &quot;repository&quot;: &quot;email-digest&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
@@ -56,44 +66,44 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "HTTP Request.All in generated-requests.executor": "Run",
-    "JavaScript Debug.index.html.executor": "Run",
-    "Python tests.Doctests in __init__.executor": "Run",
-    "Python tests.Doctests in validation.executor": "Run",
-    "Python tests.Python tests in test.py.executor": "Run",
-    "Python.__init__.executor": "Run",
-    "Python.astro_api.executor": "Run",
-    "Python.data_handling.executor": "Run",
-    "Python.face_recog.executor": "Run",
-    "Python.file_converter.executor": "Run",
-    "Python.get_response.executor": "Debug",
-    "Python.handle_static_data.executor": "Run",
-    "Python.hotel.executor": "Run",
-    "Python.main (1).executor": "Run",
-    "Python.main (2).executor": "Run",
-    "Python.main.executor": "Run",
-    "Python.read.executor": "Run",
-    "Python.samp.executor": "Run",
-    "Python.send_email.executor": "Run",
-    "Python.test.executor": "Run",
-    "Python.weather_forecast.executor": "Run",
-    "Python.weather_history.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "preprod",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "F:/email-digest",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "settings.sync",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;HTTP Request.All in generated-requests.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.index.html.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Doctests in __init__.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Doctests in validation.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in test.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python.__init__.executor&quot;: &quot;Run&quot;,
+    &quot;Python.astro_api.executor&quot;: &quot;Run&quot;,
+    &quot;Python.data_handling.executor&quot;: &quot;Run&quot;,
+    &quot;Python.face_recog.executor&quot;: &quot;Run&quot;,
+    &quot;Python.file_converter.executor&quot;: &quot;Run&quot;,
+    &quot;Python.get_response.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.handle_static_data.executor&quot;: &quot;Run&quot;,
+    &quot;Python.hotel.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.main (2).executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.read.executor&quot;: &quot;Run&quot;,
+    &quot;Python.samp.executor&quot;: &quot;Run&quot;,
+    &quot;Python.send_email.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.weather_forecast.executor&quot;: &quot;Run&quot;,
+    &quot;Python.weather_history.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;preprod&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/email-digest&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.sync&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\email-digest" />
@@ -103,6 +113,7 @@
       <recent name="F:\email-digest\natural_lang" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\email-digest\stock_crawler" />
       <recent name="E:\email-digest" />
       <recent name="F:\email-digest" />
       <recent name="F:\email-digest\weather_history" />
@@ -266,7 +277,9 @@
       <workItem from="1756450153664" duration="864000" />
       <workItem from="1756451054239" duration="138000" />
       <workItem from="1756524455321" duration="5466000" />
-      <workItem from="1757046287394" duration="1975000" />
+      <workItem from="1757046287394" duration="4248000" />
+      <workItem from="1757489703809" duration="75000" />
+      <workItem from="1758099756902" duration="560000" />
     </task>
     <task id="LOCAL-00001" summary="upupup">
       <option name="closed" value="true" />
@@ -292,7 +305,15 @@
       <option name="project" value="LOCAL" />
       <updated>1757048358359</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="up stock_crawler demo">
+      <option name="closed" value="true" />
+      <created>1757048657671</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1757048657671</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
