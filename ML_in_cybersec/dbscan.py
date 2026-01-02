@@ -6,7 +6,7 @@ NOISE = -1
 UNDEFINED = 0
 
 
-def visualize_dbscan(x, labels):
+def visualize_DBscan(x, labels):
     x_coords = [p[0] for p in x]
     y_coords = [p[1] for p in x]
 
@@ -35,20 +35,7 @@ def visualize_dbscan(x, labels):
     plt.show()
 
 
-def dbscan(db, dist_func, eps, min_pts):
-    """
-    DBSCAN clustering algo.
-
-    Args:
-        db: sequence of points.
-        dist_func: distance function
-        eps: neighborhood epsilon radius
-        min_pts: min points
-
-    Returns:
-        labels: list of cluster labels for each point in db
-    """
-
+def DBscan(db, dist_func, eps, min_pts):
     c = 0  # Cluster counter
     labels = [UNDEFINED] * len(db)  # Init labels for all points
 
@@ -111,10 +98,10 @@ if __name__ == "__main__":
     x = [[1, 2], [2, 2], [2, 3], [8, 7], [8, 8], [25, 80]]
 
     # eps=3, min_pts=2
-    result_labels = dbscan(x, euclidean_dist, 3, 2)
+    result_labels = DBscan(x, euclidean_dist, 3, 2)
 
     print("Data:", x)
     print("Labels:", result_labels)
 
     # Gọi hàm vẽ
-    visualize_dbscan(x, result_labels)
+    visualize_DBscan(x, result_labels)
