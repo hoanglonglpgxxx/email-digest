@@ -1,1 +1,0 @@
-# Bai 1: K-means algo

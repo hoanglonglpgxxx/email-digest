@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a0bb982-edb8-48b8-92e7-487c6908fde0" name="Changes" comment="update">
-      <change afterPath="$PROJECT_DIR$/ML_in_cybersec/dbscan_backup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/email-digest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/email-digest.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="1a0bb982-edb8-48b8-92e7-487c6908fde0" name="Changes" comment="done dbscan algo">
+      <change afterPath="$PROJECT_DIR$/ML_in_cybersec/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ML_in_cybersec/kmeans.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ML_in_cybersec/kmeans_backup.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ML_in_cybersec/dbscan.py" beforeDir="false" afterPath="$PROJECT_DIR$/ML_in_cybersec/dbscan.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ML_in_cybersec/main.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,6 +92,7 @@
     "Python.get_response.executor": "Debug",
     "Python.handle_static_data.executor": "Run",
     "Python.hotel.executor": "Run",
+    "Python.kmeans (1).executor": "Run",
     "Python.main (1).executor": "Run",
     "Python.main (2).executor": "Run",
     "Python.main (3).executor": "Run",
@@ -104,8 +106,9 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
     "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "preprod",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "F:/email-digest/calendar_ics",
     "node.js.detected.package.eslint": "true",
@@ -133,7 +136,7 @@
       <recent name="F:\email-digest\weather_history" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.dbscan">
+  <component name="RunManager" selected="Python.kmeans (1)">
     <configuration name="dbscan" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="email-digest" />
       <option name="ENV_FILES" value="" />
@@ -159,7 +162,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="face_recog" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="kmeans (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="email-digest" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -168,13 +171,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/computer_vision" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ML_in_cybersec" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="RUN_TOOL" value="" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/computer_vision/face_recog.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ML_in_cybersec/kmeans.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -183,7 +185,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="main (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="kmeans" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="email-digest" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -192,13 +194,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/soundcloud_downloader" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ML_in_cybersec" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="RUN_TOOL" value="" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/soundcloud_downloader/main.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\hoang\PycharmProjects\email-digest\ML_in_cybersec\kmeans.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -257,11 +258,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.kmeans (1)" />
+        <item itemvalue="Python.kmeans" />
         <item itemvalue="Python.dbscan" />
         <item itemvalue="Python.main (3)" />
         <item itemvalue="Python.main (2)" />
-        <item itemvalue="Python.main (1)" />
-        <item itemvalue="Python.face_recog" />
       </list>
     </recent_temporary>
   </component>
@@ -403,7 +404,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765782908751</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="done dbscan algo">
+      <option name="closed" value="true" />
+      <created>1767355535516</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1767355535516</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -428,7 +437,8 @@
     <MESSAGE value="update multi-links input for soundcloud-downloader-2" />
     <MESSAGE value="update add calendar_ics maker" />
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="done dbscan algo" />
+    <option name="LAST_COMMIT_MESSAGE" value="done dbscan algo" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -437,6 +447,10 @@
           <url>file://$USER_HOME$/AppData/Local/Packages/PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0/LocalCache/local-packages/Python311/site-packages/underthesea/pipeline/sentiment/bank/__init__.py</url>
           <line>26</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ML_in_cybersec/kmeans_backup.py</url>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
