@@ -1,107 +1,214 @@
 import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn.metrics import classification_report, confusion_matrix
 from sklearn.model_selection import train_test_split, cross_val_score
 from sklearn.ensemble import RandomForestClassifier
 import joblib
 import time
+import numpy as np
 
 
-def main():
-    # --- Step 1 & 2: Load dữ liệu ---
-    print("1. Đang đọc dữ liệu từ file 'ad.data'...")
-    # low_memory=False giúp tránh lỗi warning vì dữ liệu có lẫn lộn số và ký tự "?"
-    try:
-        df = pd.read_csv("ad.data", header=None, low_memory=False)
-    except FileNotFoundError:
-        print("LỖI: Không tìm thấy file 'ad.data'. Hãy tải nó về và để cùng thư mục với file code này.")
-        return
-
-    # Đổi tên cột cuối cùng (cột 1558) thành 'label' để dễ gọi
-    df.rename(columns={1558: "label"}, inplace=True)
-
-    # --- Step 3 & 4: Làm sạch dữ liệu (Xử lý giá trị thiếu '?') ---
-    print("2. Đang tìm và xóa các dòng lỗi (chứa ký tự '?')...")
-    print("   Lưu ý: Bước này có thể mất vài chục giây tùy tốc độ máy.")
-
+# --- 1. FUNCTION: LOAD AND CLEAN DATA ---
+def load_and_clean_data(filepath="ad.data"):
+    print("\n[1/6] Loading and cleaning data...")
     start_time = time.time()
 
-    # Cách trong sách dùng vòng lặp for (khá chậm), nhưng mình giữ nguyên logic để bạn dễ hiểu
-    # Tuy nhiên, ta chuyển đổi toàn bộ về string trước để tránh lỗi kiểu dữ liệu
-    improper_rows = []
+    try:
+        # low_memory=False prevents warnings due to mixed types (numbers and '?')
+        df = pd.read_csv(filepath, header=None, low_memory=False)
+    except FileNotFoundError:
+        print(f"ERROR: File '{filepath}' not found. Please download it first.")
+        return None
 
-    # Duyệt qua từng hàng (iterrows)
-    for index, row in df.iterrows():
-        # Kiểm tra nhanh: Nếu dòng này có chứa "?" thì đánh dấu luôn
-        # (Dùng map để kiểm tra toàn bộ dòng nhanh hơn for lồng nhau)
+    # Rename the last column (1558) to 'label'
+    df.rename(columns={1558: "label"}, inplace=True)
 
-        # if row.astype(str).str.contains(r'\?').any():
-        #     improper_rows.append(index)
+    # Handle missing values ("?")
+    # Replace "?" with NaN and then drop those rows
+    # Using regex replacement is faster than iterating with a for-loop
+    df = df.replace(to_replace='[?]', value=np.nan, regex=True)
 
-        for col in df.columns:
-            val = str(row[col]).strip()
-            if val == "?":
-                improper_rows.append(index)
+    initial_len = len(df)
+    df.dropna(inplace=True)
+    final_len = len(df)
 
-    # Xóa các dòng bị lỗi
-    df = df.drop(df.index[improper_rows])
+    # Convert feature columns to numeric (float)
+    # Exclude the label column (last one)
+    feature_cols = df.columns[:-1]
+    df[feature_cols] = df[feature_cols].apply(pd.to_numeric)
 
-    print(f"   -> Đã xóa {len(improper_rows)} dòng lỗi.")
-    print(f"   -> Thời gian xử lý: {time.time() - start_time:.2f} giây.")
+    print(f"   -> Removed {initial_len - final_len} rows containing errors/missing values.")
+    print(f"   -> Processing time: {time.time() - start_time:.2f} seconds.")
+    return df
 
-    # --- Step 5: Chuyển đổi nhãn (Label) sang số ---
-    # 1: Là quảng cáo (ad.), 0: Không phải quảng cáo
-    print("3. Chuyển đổi nhãn sang dạng số (0 và 1)...")
 
-    def label_to_numeric(row):
-        # strip() để cắt bỏ khoảng trắng thừa nếu có
-        if str(row["label"]).strip() == "ad.":
-            return 1
-        else:
-            return 0
+# --- 2. FUNCTION: PREPARE DATA ---
+def prepare_data(df):
+    print("\n[2/6] Splitting Train/Test sets...")
 
-    df["label"] = df.apply(label_to_numeric, axis=1)
+    # Convert label: "ad." -> 1, "nonad." -> 0
+    df["label"] = df["label"].apply(lambda x: 1 if str(x).strip() == "ad." else 0)
 
-    # --- Step 6: Chia dữ liệu Train/Test ---
-    print("4. Chia dữ liệu train/test...")
-    df_train, df_test = train_test_split(df, test_size=0.2, random_state=42)
+    # Separate Features (X) and Target (y)
+    X = df.drop("label", axis=1).values
+    y = df["label"].values
 
-    # --- Step 7: Tách Feature (X) và Label (y) ---
-    # pop() sẽ lấy cột label ra và xóa nó khỏi df ban đầu, trả về array
-    y_train = df_train.pop("label").values
-    y_test = df_test.pop("label").values
+    # Split data (80% Train, 20% Test)
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Phần còn lại là X (features)
-    # Cần chuyển về dạng số thực (float) vì mô hình không hiểu string
-    # Lúc đọc vào có "?" nên pandas hiểu là string, giờ sạch rồi thì ép kiểu về float
-    X_train = df_train.astype(float).values
-    X_test = df_test.astype(float).values
+    return X_train, X_test, y_train, y_test
 
-    # --- Step 8: Huấn luyện mô hình ---
-    print("5. Đang huấn luyện Random Forest...")
+
+# --- 3. FUNCTION: TRAIN MODEL ---
+def train_model(X_train, y_train):
+    print("\n[3/6] Training Random Forest Classifier...")
+    # n_estimators=100: Create 100 decision trees
     clf = RandomForestClassifier(n_estimators=100, random_state=42)
     clf.fit(X_train, y_train)
+    return clf
 
-    # --- Step 9: Đánh giá ---
-    print("6. Đang chấm điểm trên tập Test...")
+
+# --- 4. FUNCTION: EVALUATE MODEL (CROSS-VALIDATION) ---
+def evaluate_model(clf, X_train, y_train, X_test, y_test):
+    print("\n[4/6] Evaluating model performance...")
+
+    # 1. Score on Test Set
     score = clf.score(X_test, y_test)
-    print("=" * 30)
-    print(f"KẾT QUẢ ĐỘ CHÍNH XÁC (Test Set): {score * 100:.2f}%")
-    print("=" * 30)
+    print(f"   -> Test Set Accuracy: {score * 100:.2f}%")
 
-    # ==============================================================================
-    # [PHẦN MỚI THÊM VÀO] KIỂM CHỨNG CHÉO (CROSS-VALIDATION)
-    # ==============================================================================
-    print("\n[KIỂM TRA SÂU] Đang chạy K-Fold Cross Validation (5 lần)...")
-    # cv=5: Chia dữ liệu làm 5 phần, máy sẽ học 5 lần khác nhau để xem phong độ có ổn định không
+    # 2. Cross-Validation (5-Fold)
+    print("   -> Running 5-Fold Cross-Validation...")
     cv_scores = cross_val_score(clf, X_train, y_train, cv=5)
 
-    print(f"   -> Điểm số 5 lần chạy: {cv_scores}")
-    print(f"   -> ĐỘ CHÍNH XÁC TRUNG BÌNH: {cv_scores.mean() * 100:.2f}% (+/- {cv_scores.std() * 100:.2f}%)")
-    print("=" * 30 + "\n")
-    # ==============================================================================
+    # 3. Create a DataFrame for the Cross-Validation Report
+    table_data = []
+    for i, s in enumerate(cv_scores):
+        table_data.append({
+            "Fold": f"Run {i + 1}",
+            "Accuracy": s,
+            "Formatted": f"{s * 100:.2f}%"
+        })
 
-    print("7. Đang lưu model vào file 'ad_blocker_model.joblib'...")
+    mean_score = cv_scores.mean()
+    std_score = cv_scores.std()
+
+    # Add Average row
+    table_data.append({
+        "Fold": "AVERAGE",
+        "Accuracy": mean_score,
+        "Formatted": f"{mean_score * 100:.2f}% (+/- {std_score * 100:.2f}%)"
+    })
+
+    df_cv_report = pd.DataFrame(table_data)
+
+    # Print the table to console
+    print("\n" + "=" * 40)
+    print("CROSS-VALIDATION REPORT")
+    print("=" * 40)
+    print(df_cv_report[["Fold", "Formatted"]].to_string(index=False))
+    print("=" * 40)
+
+    # Export to CSV
+    output_filename = "cross_validation_report.csv"
+    df_cv_report.to_csv(output_filename, index=False)
+    print(f"   -> Report exported to: '{output_filename}'")
+
+    return cv_scores, mean_score, std_score
+
+
+# --- 5. FUNCTION: GENERATE DETAILED REPORT ---
+def detailed_report(clf, X_test, y_test):
+    print("\n[5/6] Generating detailed classification report...")
+    y_pred = clf.predict(X_test)
+
+    print("\n--- Classification Report ---")
+    print(classification_report(y_test, y_pred, target_names=["Non-Ad", "Ad"]))
+
+    return y_pred
+
+
+# --- 6. FUNCTION: VISUALIZE RESULTS ---
+def visualize_results(clf, y_test, y_pred, cv_scores, cv_mean):
+    print("\n[6/6] Visualizing results...")
+
+    # Setup the figure with 2 subplots (Bar Chart + Confusion Matrix)
+    plt.figure(figsize=(14, 6))
+
+    # --- CHART 1: Cross-Validation Results ---
+    plt.subplot(1, 2, 1)
+    folds = [f"Run {i + 1}" for i in range(len(cv_scores))]
+    bars = plt.bar(folds, cv_scores, color='#4e79a7', alpha=0.8)
+
+    # Add mean line
+    plt.axhline(cv_mean, color='red', linestyle='--', linewidth=2, label=f'Average: {cv_mean * 100:.2f}%')
+
+    # Add text labels on bars
+    for bar in bars:
+        height = bar.get_height()
+        plt.text(bar.get_x() + bar.get_width() / 2., height,
+                 f'{height * 100:.1f}%', ha='center', va='bottom')
+
+    plt.ylim(0.8, 1.0)  # Zoom in Y-axis
+    plt.ylabel('Accuracy')
+    plt.title('Cross-Validation Scores (5-Folds)')
+    plt.legend(loc='lower right')
+    plt.grid(axis='y', linestyle='--', alpha=0.5)
+
+    # --- CHART 2: Confusion Matrix ---
+    plt.subplot(1, 2, 2)
+    cm = confusion_matrix(y_test, y_pred)
+    sns.heatmap(cm, annot=True, fmt='d', cmap='Blues',
+                xticklabels=["Non-Ad (Predicted)", "Ad (Predicted)"],
+                yticklabels=["Non-Ad (Actual)", "Ad (Actual)"])
+    plt.title('Confusion Matrix')
+    plt.ylabel('Actual Label')
+    plt.xlabel('Predicted Label')
+
+    plt.tight_layout()
+    plt.show()
+
+    # --- CHART 3: Feature Importance (Separate Figure) ---
+    plt.figure(figsize=(10, 6))
+    importances = clf.feature_importances_
+    # Get Top 10 features
+    indices = np.argsort(importances)[::-1][:10]
+
+    plt.title("Top 10 Most Important Features")
+    plt.bar(range(10), importances[indices], align="center", color='green')
+    plt.xticks(range(10), indices)
+    plt.xlabel("Feature Index")
+    plt.ylabel("Importance Score")
+    plt.tight_layout()
+    plt.show()
+
+
+# --- MAIN FUNCTION ---
+def main():
+    # 1. Load Data
+    df = load_and_clean_data("ad.data")
+    if df is None: return
+
+    # 2. Prepare Data
+    X_train, X_test, y_train, y_test = prepare_data(df)
+
+    # 3. Train Model
+    clf = train_model(X_train, y_train)
+
+    # 4. Evaluate (Cross Validation & Export Table)
+    cv_scores, cv_mean, cv_std = evaluate_model(clf, X_train, y_train, X_test, y_test)
+
+    # 5. Detailed Report
+    y_pred = detailed_report(clf, X_test, y_test)
+
+    # 6. Visualize
+    visualize_results(clf, y_test, y_pred, cv_scores, cv_mean)
+
+    # 7. Save Model
+    print("\nSaving model...")
     joblib.dump(clf, 'ad_blocker_model.joblib')
-    print("--> Đã lưu thành công! Bạn có thể tắt chương trình.")
+    print("--> COMPLETED! Model saved successfully.")
+
 
 if __name__ == "__main__":
     main()
