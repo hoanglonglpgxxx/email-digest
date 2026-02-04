@@ -7,7 +7,7 @@ import os
 
 async def crawl_on_local(site_url):
     ads_found = []
-    target_path = f"{site_url.rstrip('/')}/phimhay"
+    target_path = f"{site_url.rstrip('/')}"
 
     async with async_playwright() as p:
         # headless=False giúp bạn quan sát Cloudflare giải đố
@@ -42,21 +42,20 @@ async def crawl_on_local(site_url):
 
             # Quét các thẻ Ads cá cược class 'is-image'
             ad_elements = await page.query_selector_all("a.is-image")
-            print(f"-> Tìm thấy {len(ad_elements)} mẫu Ads tiềm năng.")
+            print(f"-> Phát hiện {len(ad_elements)} phần tử class is-image")
 
             for a in ad_elements:
                 href = await a.get_attribute('href')
                 img = await a.query_selector('img')
-                src = await img.get_attribute('src') if img else None
+                src = await img.get_attribute('src') if img else "No Src"
 
-                # Chỉ lấy link dẫn ra ngoài (Third-party) để làm nhãn 1
-                if href and src and "rophim" not in href:
-                    ads_found.append({
-                        "url": src,
-                        "target_url": href,
-                        "is_ad": 1
-                    })
-                    print(f"🔥 Bắt được Ads: {urlparse(href).netloc}")
+                # In ra để soi xem nó là link gì
+                print(f"   [DEBUG] Found Link: {href}")
+
+                # Nới lỏng bộ lọc: Nếu href dẫn ra domain khác HOẶC chứa các từ khóa lạ
+                if href and ("rophim" not in href or "utm" in href or "click" in href):
+                    ads_found.append({"url": src, "target_url": href, "is_ad": 1})
+                    print(f"🔥 Đã bắt được: {href[:50]}...")
 
         except Exception as e:
             print(f"-> Lỗi: {e}")
@@ -66,12 +65,12 @@ async def crawl_on_local(site_url):
 
 
 if __name__ == "__main__":
-    url = "https://rophim.la/"
+    url = "https://www.rophim.la/xem-phim/hoa-mau.DlxE1CIz?ver=1&ss=1&ep=1"
     data = asyncio.run(crawl_on_local(url))
 
     if data:
         df = pd.DataFrame(data)
-        file_name = "bet_ads_raw.csv"
+        file_name = "bet_ads_raw_3.csv"
         # Nối tiếp vào file cũ nếu đã tồn tại
         file_exists = os.path.isfile(file_name)
         df.to_csv(file_name, mode='a', index=False, header=not file_exists)

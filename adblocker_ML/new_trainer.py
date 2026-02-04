@@ -1,103 +1,84 @@
-import pandas as pd
 import numpy as np
 import joblib
-from sklearn.model_selection import train_test_split, cross_val_score
+import math
+import re
+import os
+import pandas as pd
+import joblib
+import re
+from urllib.parse import urlparse
+from collections import Counter
+from urllib.parse import urlparse
+from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import classification_report, confusion_matrix
+from sklearn.metrics import classification_report
+
+
+# --- 1. HÀM TRÍCH XUẤT ĐẶC TRƯNG V3 ---
+def calculate_entropy(text):
+    if not text or not isinstance(text, str): return 0
+    counter = Counter(text)
+    length = len(text)
+    # Công thức Shannon Entropy
+    return -sum((count / length) * math.log2(count / length) for count in counter.values())
+
+
+def extract_features_final(url, is_ad_label=0):
+    url_str = str(url).lower()
+    parsed = urlparse(url_str)
+
+    # Đặc trưng 1: Loại file (Rất quan trọng để cứu CSS/JS)
+    is_static_asset = 1 if any(url_str.endswith(ext) for ext in ['.css', '.js', '.woff', '.ttf']) else 0
+
+    # Đặc trưng 2: Domain uy tín (Whitelisting nội bộ)
+    is_internal = 1 if "rophim.la" in parsed.netloc or not parsed.netloc else 0
+
+    # Đặc trưng 3: Keyword (Regex chặt chẽ hơn)
+    keywords = r'\b(ad|banner|bet|click|track|pop|luxe|fun|tx88|789club)\b'
+    has_ad_keyword = 1 if re.search(keywords, url_str) else 0
+
+    return {
+        "is_internal": is_internal,
+        "is_static_asset": is_static_asset,  # Đặc trưng mới cứu CSS
+        "url_length": len(url_str),
+        "num_params": len(parsed.query.split('&')) if parsed.query else 0,
+        "path_depth": len([x for x in parsed.path.split('/') if x]),
+        "has_ad_keyword": has_ad_keyword,
+        "is_ad": is_ad_label
+    }
 
 
 def main():
-    # 1. LOAD DỮ LIỆU
-    print("1. Đang đọc dữ liệu 'dataset_hybrid_2026.csv'...")
-    try:
-        df = pd.read_csv("dataset_hybrid_2026.csv")
-    except FileNotFoundError:
-        print("LỖI: Không tìm thấy file csv. Hãy chạy crawler trước!")
-        return
+    final_rows = []
 
-    print(f"   -> Tổng số dòng: {len(df)}")
+    # Đọc dataset to nhất (Lấy URL và nhãn gốc)
+    if os.path.exists("dataset_hybrid_2026.csv"):
+        df_old = pd.read_csv("dataset_hybrid_2026.csv")
+        for _, row in df_old.iterrows():
+            # Chỉ lấy URL để tính lại đặc trưng
+            final_rows.append(extract_features_final(row['url'], row['is_ad']))
 
-    # 2. XỬ LÝ DỮ LIỆU (PREPROCESSING)
-    print("2. Đang xử lý dữ liệu...")
+    # Đọc các file crawl Bet của mitsne
+    for f in ["bet_ads_raw.csv", "bet_ads_raw_2.csv", "bet_ads_raw_3.csv"]:
+        if os.path.exists(f):
+            df_raw = pd.read_csv(f)
+            for _, row in df_raw.iterrows():
+                # Ưu tiên target_url vì nó chứa domain Bet
+                target = row['target_url'] if pd.notna(row['target_url']) else row['url']
+                final_rows.append(extract_features_final(target, 1))
 
-    # A. Xử lý cột phân loại (Request Type)
-    # Máy học không hiểu "image", "script". Ta phải tách thành các cột 0/1 (One-Hot Encoding)
-    # Ví dụ: request_type='script' -> req_script=1, req_image=0
-    df = pd.get_dummies(df, columns=['request_type'], prefix='req')
+    df = pd.DataFrame(final_rows).drop_duplicates()
 
-    # B. Chọn các cột đặc trưng (Features)
-    # Ta loại bỏ các cột không dùng để train:
-    # - 'is_ad': Đây là đáp án (Label)
-    # - 'url', 'domain': Đây là text thô (Ta chưa dùng NLP ở bước này)
-    # - 'width', 'height': Giữ lại
-    # - 'path_depth', 'num_digits'...: Giữ lại hết
-
-    ignore_cols = ['is_ad', 'url', 'domain']
-
-    # Lấy tất cả các cột còn lại làm đầu vào (X)
-    feature_cols = [c for c in df.columns if c not in ignore_cols]
-
-    # Kiểm tra xem có cột nào bị NaN (Rỗng) không, nếu có thì điền 0
-    df[feature_cols] = df[feature_cols].fillna(0)
-
-    X = df[feature_cols]
+    # Huấn luyện Random Forest
+    X = df.drop(columns=['is_ad'])
     y = df['is_ad']
 
-    print(f"   -> Các đặc trưng sử dụng ({len(feature_cols)} cột):")
-    print(f"      {feature_cols}")
+    clf = RandomForestClassifier(n_estimators=200, class_weight='balanced', random_state=42)
+    clf.fit(X, y)
 
-    # 3. CHIA DỮ LIỆU
-    print("3. Chia tập Train/Test (80/20)...")
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-
-    # 4. HUẤN LUYỆN
-    print("4. Đang huấn luyện Random Forest...")
-    # n_estimators=100: 100 cây quyết định
-    # class_weight='balanced': Giúp model chú ý hơn đến lớp thiểu số (nếu Ads ít hơn Content)
-    clf = RandomForestClassifier(n_estimators=100, random_state=42, class_weight='balanced')
-    clf.fit(X_train, y_train)
-
-    # 5. ĐÁNH GIÁ
-    print("\n" + "=" * 40)
-    print("KẾT QUẢ ĐÁNH GIÁ")
-    print("=" * 40)
-
-    # Đánh giá trên tập Test
-    score = clf.score(X_test, y_test)
-    print(f"Độ chính xác (Accuracy): {score * 100:.2f}%")
-
-    y_pred = clf.predict(X_test)
-    print("\nChi tiết (Classification Report):")
-    print(classification_report(y_test, y_pred, target_names=['SẠCH', 'QUẢNG CÁO']))
-
-    print("Ma trận nhầm lẫn (Confusion Matrix):")
-    cm = confusion_matrix(y_test, y_pred)
-    print(f" - Đoán đúng là Sạch: {cm[0][0]}")
-    print(f" - Đoán nhầm Sạch thành Ads: {cm[0][1]}")
-    print(f" - Đoán nhầm Ads thành Sạch: {cm[1][0]} (Nguy hiểm - Bỏ lọt)")
-    print(f" - Đoán đúng là Ads: {cm[1][1]}")
-
-    # 6. XEM ĐỘ QUAN TRỌNG CỦA CÁC ĐẶC TRƯNG
-    print("\n" + "=" * 40)
-    print("TOP YẾU TỐ QUYẾT ĐỊNH (FEATURE IMPORTANCE)")
-    print("=" * 40)
-    importances = clf.feature_importances_
-    indices = np.argsort(importances)[::-1]  # Sắp xếp giảm dần
-
-    for f in range(min(10, len(feature_cols))):  # In top 10
-        idx = indices[f]
-        print(f"{f + 1}. {feature_cols[idx]}: {importances[idx]:.4f}")
-
-    # 7. LƯU MODEL
-    print("\n7. Đang lưu model...")
-    # Lưu cả Model và Danh sách tên cột (Để sau này API biết đường mà nhập liệu)
-    model_data = {
-        "model": clf,
-        "feature_names": feature_cols
-    }
-    joblib.dump(model_data, 'model_hybrid_2026.joblib')
-    print("-> Đã lưu thành công: 'model_hybrid_2026.joblib'")
-    print("-> Xong! Bạn đã có một bộ não AI xịn xò.")
+    # Lưu Model
+    joblib.dump({"model": clf, "features": X.columns.tolist()}, 'model_hybrid_2026.joblib')
+    print("✅ Đã huấn luyện xong Model với đặc trưng đồng nhất!")
 
 
 if __name__ == "__main__":
