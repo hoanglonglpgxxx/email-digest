@@ -1,136 +1,107 @@
 import math
+import numpy as np
+import matplotlib.pyplot as plt
 
-# Định nghĩa các hằng số trạng thái để code dễ đọc (giống pseudocode)
 NOISE = -1
 UNDEFINED = 0
 
 
-def dbscan(DB, dist_func, eps, min_pts):
-    """
-    DB: List các điểm dữ liệu (ví dụ: [[1,2], [2,2], ...])
-    dist_func: Hàm tính khoảng cách
-    eps: Bán kính epsilon
-    min_pts: Số điểm tối thiểu
-    """
-    C = 0  # Cluster counter
-    labels = [UNDEFINED] * len(DB)  # Khởi tạo nhãn cho tất cả các điểm
+def visualize_DBscan(x, labels):
+    x_coords = [p[0] for p in x]
+    y_coords = [p[1] for p in x]
 
-    # for each point P in database DB
-    # Dùng index (P_idx) để truy cập label dễ dàng hơn
-    for P_idx in range(len(DB)):
+    unique_labels = set(labels)
+    colors = [plt.cm.Spectral(each) for each in np.linspace(0, 1, len(unique_labels))]
 
-        # if label(P) ≠ undefined then continue
-        if labels[P_idx] != UNDEFINED:
+    plt.figure(figsize=(8, 6))
+
+    for k, col in zip(unique_labels, colors):
+        if k == -1:
+            col = [0, 0, 0, 1]
+
+        class_member_mask = [label == k for label in labels]
+
+        xy = [x[i] for i in range(len(x)) if class_member_mask[i]]
+        xy_x = [p[0] for p in xy]
+        xy_y = [p[1] for p in xy]
+
+        plt.plot(xy_x, xy_y, 'o', markerfacecolor=tuple(col),
+                 markeredgecolor='k', markersize=10 if k != -1 else 6,
+                 label=f'Cluster {k}' if k != -1 else 'Noise')
+
+    plt.title('Result of dbSCAN')
+    plt.legend()
+    plt.grid(True)
+    plt.show()
+
+
+def DBscan(db, dist_func, eps, min_pts):
+    c = 0  # Cluster counter
+    labels = [UNDEFINED] * len(db)  # Init labels for all points
+
+    for p_idx in range(len(db)):
+
+        if labels[p_idx] != UNDEFINED:
             continue
 
-        # Neighbors N := RangeQuery(DB, distFunc, P, eps)
-        neighbors = range_query(DB, dist_func, P_idx, eps)
+        neighbors = range_query(db, dist_func, p_idx, eps)
 
-        # if |N| < minPts then (Density check)
         if len(neighbors) < min_pts:
-            labels[P_idx] = NOISE  # label(P) := Noise
+            labels[p_idx] = NOISE
             continue
 
-        # C := C + 1
-        C += 1
-        # label(P) := C
-        labels[P_idx] = C
+        c += 1
+        labels[p_idx] = c
 
-        # SeedSet S := N \ {P}
-        # Tạo danh sách hạt giống từ hàng xóm, loại bỏ chính điểm P
-        seeds = [n for n in neighbors if n != P_idx]
+        seeds = [n for n in neighbors if n != p_idx]
 
-        # for each point Q in S
-        # Trong Python, không thể vừa lặp vừa thêm phần tử vào list bằng 'for'
-        # Nên ta dùng 'while' để mô phỏng việc S mở rộng (S := S U N)
         i = 0
         while i < len(seeds):
-            Q_idx = seeds[i]
+            q_idx = seeds[i]
             i += 1
 
-            # if label(Q) = Noise then label(Q) := C
-            if labels[Q_idx] == NOISE:
-                labels[Q_idx] = C
+            if labels[q_idx] == NOISE:
+                labels[q_idx] = c
 
-            # if label(Q) ≠ undefined then continue
-            if labels[Q_idx] != UNDEFINED:
+            if labels[q_idx] != UNDEFINED:
                 continue
 
-            # label(Q) := C
-            labels[Q_idx] = C
+            labels[q_idx] = c
 
-            # Neighbors N := RangeQuery(DB, distFunc, Q, eps)
-            neighbors_Q = range_query(DB, dist_func, Q_idx, eps)
+            neighbors_q = range_query(db, dist_func, q_idx, eps)
 
-            # if |N| ≥ minPts then (Density check)
-            if len(neighbors_Q) >= min_pts:
-                # S := S U N (Add new neighbors to seed set)
-                for n_idx in neighbors_Q:
-                    if n_idx not in seeds:  # Tránh thêm trùng lặp (Optimization)
+            if len(neighbors_q) >= min_pts:
+                for n_idx in neighbors_q:
+                    if n_idx not in seeds:
                         seeds.append(n_idx)
 
     return labels
 
 
-# RangeQuery(DB, distFunc, Q, eps)
-def range_query(DB, dist_func, Q_idx, eps):
+def range_query(db, dist_func, q_idx, eps):
     neighbors = []
-    Q_val = DB[Q_idx]
+    q_val = db[q_idx]
 
-    # for each point P in database DB
-    for P_idx, P_val in enumerate(DB):
-        # if distFunc(Q, P) ≤ eps
-        if dist_func(Q_val, P_val) <= eps:
-            neighbors.append(P_idx)
+    for p_idx, p_val in enumerate(db):
+        if dist_func(q_val, p_val) <= eps:
+            neighbors.append(p_idx)
 
     return neighbors
 
 
-# --- Hàm phụ trợ để chạy thử (Helper) ---
-
-# Hàm tính khoảng cách Euclid đơn giản
 def euclidean_dist(p1, p2):
     sum_sq = sum((a - b) ** 2 for a, b in zip(p1, p2))
     return math.sqrt(sum_sq)
 
 
-# --- Chạy thử (Example Usage) ---
 if __name__ == "__main__":
-    # Dữ liệu mẫu
-    X = [[1, 2], [2, 2], [2, 3], [8, 7], [8, 8], [25, 80]]
+    x = [[1, 2], [2, 2], [2, 3], [8, 7], [8, 8], [25, 80]]
 
-    # Chạy thuật toán
     # eps=3, min_pts=2
-    result_labels = dbscan(X, euclidean_dist, 3, 2)
+    result_labels = DBscan(x, euclidean_dist, 3, 2)
 
-    print("Dữ liệu:", X)
-    print("Nhãn (0=Unused, -1=Noise, >0=Cluster):", result_labels)
+    print("Data:", x)
+    print("Labels:", result_labels)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    # Gọi hàm vẽ
+    visualize_DBscan(x, result_labels)
