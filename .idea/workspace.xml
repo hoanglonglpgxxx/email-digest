@@ -4,14 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a0bb982-edb8-48b8-92e7-487c6908fde0" name="Changes" comment="done dbscan algo">
-      <change afterPath="$PROJECT_DIR$/adblocker_ML/features.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adblocker_ML/train_url_only.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/email-digest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/email-digest.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="1a0bb982-edb8-48b8-92e7-487c6908fde0" name="Changes" comment="up">
+      <change afterPath="$PROJECT_DIR$/adblocker_ML/latest_trainer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adblocker_ML/test_latest.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adblocker_ML/trainer_v8.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adblocker_ML/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/adblocker_ML/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adblocker_ML/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/adblocker_ML/server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adblocker_ML/dataset_hybrid_2026.csv" beforeDir="false" afterPath="$PROJECT_DIR$/adblocker_ML/dataset_hybrid_2026.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adblocker_ML/features.py" beforeDir="false" afterPath="$PROJECT_DIR$/adblocker_ML/features.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adblocker_ML/my_modern_ad_dataset.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/adblocker_ML/my_modern_ad_dataset_v2.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/adblocker_ML/new_trainer.py" beforeDir="false" afterPath="$PROJECT_DIR$/adblocker_ML/new_trainer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adblocker_ML/predict_modern.py" beforeDir="false" afterPath="$PROJECT_DIR$/adblocker_ML/predict_modern.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adblocker_ML/rophim.py" beforeDir="false" afterPath="$PROJECT_DIR$/adblocker_ML/rophim.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adblocker_ML/test1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/adblocker_ML/test_api.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/adblocker_ML/train_url_only.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,17 +102,22 @@
     "Python.handle_static_data.executor": "Run",
     "Python.hotel.executor": "Run",
     "Python.kmeans (1).executor": "Run",
+    "Python.latest_trainer.executor": "Run",
     "Python.main (1).executor": "Run",
     "Python.main (2).executor": "Run",
     "Python.main (3).executor": "Run",
     "Python.main.executor": "Run",
     "Python.new_trainer.executor": "Run",
+    "Python.predict_modern.executor": "Run",
     "Python.read.executor": "Run",
+    "Python.rophim.executor": "Run",
     "Python.samp.executor": "Run",
     "Python.send_email.executor": "Run",
     "Python.server.executor": "Run",
     "Python.test.executor": "Run",
+    "Python.test_latest.executor": "Run",
     "Python.train_url_only.executor": "Run",
+    "Python.trainer_v8.executor": "Run",
     "Python.weather_forecast.executor": "Run",
     "Python.weather_history.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -133,38 +146,15 @@
       <recent name="F:\email-digest\nlp_diary" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\hoang\PycharmProjects\email-digest\adblocker_ML" />
       <recent name="F:\email-digest\calendar_ics" />
       <recent name="F:\email-digest\stock_crawler" />
       <recent name="E:\email-digest" />
       <recent name="F:\email-digest" />
-      <recent name="F:\email-digest\weather_history" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.main">
-    <configuration name="kmeans (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="email-digest" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ML_in_cybersec" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="RUN_TOOL" value="" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ML_in_cybersec/kmeans.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.test_latest">
+    <configuration name="latest_trainer" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="email-digest" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -178,7 +168,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="RUN_TOOL" value="" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/adblocker_ML/main.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/adblocker_ML/latest_trainer.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -211,7 +201,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="server" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="predict_modern" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="email-digest" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -220,13 +210,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="SDK_NAME" value="Python 3.14 (email-digest)" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/adblocker_ML" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="RUN_TOOL" value="" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/adblocker_ML/server.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/adblocker_ML/predict_modern.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -235,7 +224,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="train_url_only" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="test_latest" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="email-digest" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -244,13 +233,35 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="SDK_NAME" value="Python 3.14 (email-digest)" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/adblocker_ML" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="RUN_TOOL" value="" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/adblocker_ML/train_url_only.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/adblocker_ML/test_latest.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="trainer_v8" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="email-digest" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/adblocker_ML" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="RUN_TOOL" value="" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/adblocker_ML/trainer_v8.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -261,11 +272,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.main" />
-        <item itemvalue="Python.server" />
-        <item itemvalue="Python.train_url_only" />
+        <item itemvalue="Python.test_latest" />
+        <item itemvalue="Python.trainer_v8" />
+        <item itemvalue="Python.latest_trainer" />
+        <item itemvalue="Python.predict_modern" />
         <item itemvalue="Python.new_trainer" />
-        <item itemvalue="Python.kmeans (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -415,7 +426,15 @@
       <option name="project" value="LOCAL" />
       <updated>1767355535516</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="up">
+      <option name="closed" value="true" />
+      <created>1770127711655</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1770127711655</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -441,7 +460,8 @@
     <MESSAGE value="update add calendar_ics maker" />
     <MESSAGE value="update" />
     <MESSAGE value="done dbscan algo" />
-    <option name="LAST_COMMIT_MESSAGE" value="done dbscan algo" />
+    <MESSAGE value="up" />
+    <option name="LAST_COMMIT_MESSAGE" value="up" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
