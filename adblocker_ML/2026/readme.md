@@ -1,1 +1,1 @@
-pip install pandas numpy scikit-learn joblib matplotlib imbalanced-learn fastapi uvicorn
+_pip install pandas numpy scikit-learn joblib matplotlib imbalanced-learn fastapi uvicorn_ imblearn

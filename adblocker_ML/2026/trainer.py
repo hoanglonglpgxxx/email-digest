@@ -10,10 +10,10 @@ import matplotlib.pyplot as plt
 
 # 1. Nạp dữ liệu
 try:
-    df = pd.read_csv('dataset_hybrid_2026_advanced.csv')
+    df = pd.read_csv('dataset_01032026.csv')
     print("✅ Đã nạp file thành công!")
 except FileNotFoundError:
-    print("❌ Lỗi: Hãy upload file 'dataset_hybrid_2026_advanced.csv' vào Colab.")
+    print("❌ Lỗi:  file 'dataset_01032026.csv' .")
     raise
 
 df['structure_density'] = df['num_siblings'] / (df['dom_depth'] + 1)
@@ -43,9 +43,9 @@ print(f"📈 Sau SMOTE (chỉ tập Train): {Counter(y_train_res)}")
 # 5. Huấn luyện Random Forest
 # n_jobs=-1 để tận dụng tối đa CPU của Colab
 rf_model = RandomForestClassifier(
-    n_estimators=500,
-    max_depth=7,  # Giảm độ sâu để ép mô hình học "quy luật chung"
-    min_samples_leaf=100,  # Mỗi lá phải có ít nhất 10 mẫu (tránh học vẹt)
+    n_estimators=400,
+    max_depth=12,  # Giảm độ sâu để ép mô hình học "quy luật chung"
+    min_samples_leaf=20,  # Mỗi lá phải có ít nhất 10 mẫu (tránh học vẹt)
     max_features='sqrt',  # Giới hạn số đặc trưng mỗi lần chia
     random_state=42,
     n_jobs=-1,
@@ -66,8 +66,8 @@ storage = {
     'model': rf_model,
     'features': X.columns.tolist()
 }
-joblib.dump(storage, '2026_value_5.joblib')
-print("\n✅ Đã lưu model vào file: 2026_value_5.joblib")
+joblib.dump(storage, '2026_train_01032026.joblib')
+print("\n✅ Đã lưu model vào file: 2026_train_01032026.joblib")
 
 # 8. Trực quan hóa Feature Importance
 plt.figure(figsize=(10, 6))

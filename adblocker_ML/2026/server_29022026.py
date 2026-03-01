@@ -2,10 +2,14 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 import joblib
 import pandas as pd
+import logging
 
 app = FastAPI()
 
-# Cho phép Extension truy cập vào API
+# Logging để bạn có thể trace trực tiếp tại sao AI lại chặn nhầm
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger("adblocker-Server")
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -13,25 +17,54 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Load model bạn đã train
-data = joblib.load('2026_value_5.joblib')
-model = data['model']
-features = data['features']
+# Load model mới nhất của bạn
+try:
+    data = joblib.load('2026_train_rf_optimized.joblib')
+    model = data['model']
+    features = data['features']
+    logger.info("✅ Đã nạp thành công model 2026_value_5")
+except Exception as e:
+    logger.error(f"❌ Lỗi nạp model: {e}")
+
+# DANH SÁCH TRẮNG (WHITELIST) TẠM THỜI
+# Giúp khắc phục ngay lập tức lỗi chặn nhầm thumbnail Dân Trí
+DOMAIN_WHITELIST = ["dantri.com.vn", "vnexpress.net", "vietnamnet.vn"]
 
 
 @app.post("/predict")
 async def predict(req: dict):
-    # Tính toán 2 đặc trưng mới ngay tại Server
-    req['structure_density'] = req['num_siblings'] / (req['dom_depth'] + 1)
-    req['url_complexity'] = req['num_special_chars'] / (req['url_length'] + 1)
+    url = req.get('url', '')
+
+    # 1. Kiểm tra nhanh Whitelist (Bỏ qua nếu là ảnh nội bộ sạch)
+    if any(domain in url for domain in DOMAIN_WHITELIST):
+        return {"is_ad": False, "probability": 0.0, "reason": "whitelist"}
+
+    # 2. Tính toán đặc trưng (Thêm xử lý tránh chia cho 0)
+    depth = req.get('dom_depth', 0)
+    url_len = req.get('url_length', 0)
+
+    req['structure_density'] = req.get('num_siblings', 0) / (depth + 1)
+    req['url_complexity'] = req.get('num_special_chars', 0) / (url_len + 1)
 
     df = pd.DataFrame([req])
     df = df.reindex(columns=features, fill_value=0)
 
+    # 3. Dự đoán xác suất
     prob = model.predict_proba(df)[0][1]
-    is_ad = 1 if prob >= 0.8 else 0
 
-    return {"is_ad": bool(is_ad), "probability": float(prob)}
+    # CHIẾN THUẬT NGƯỠNG (THRESHOLD)
+    # Với Precision 0.62, ta nên nâng ngưỡng lên 0.85 để an toàn hơn
+    threshold = 0.85
+    is_ad = 1 if prob >= threshold else 0
+
+    if is_ad:
+        logger.info(f"🛡️ BLOCKED ({prob:.2f}): {url[:50]}...")
+
+    return {
+        "is_ad": bool(is_ad),
+        "probability": float(prob),
+        "threshold_used": threshold
+    }
 
 
 if __name__ == "__main__":
