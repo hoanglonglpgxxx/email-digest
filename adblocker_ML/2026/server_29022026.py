@@ -6,7 +6,6 @@ import logging
 
 app = FastAPI()
 
-# Logging để bạn có thể trace trực tiếp tại sao AI lại chặn nhầm
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("adblocker-Server")
 
@@ -17,7 +16,6 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Load model mới nhất của bạn
 try:
     data = joblib.load('2026_train_rf_optimized.joblib')
     model = data['model']
@@ -26,8 +24,6 @@ try:
 except Exception as e:
     logger.error(f"❌ Lỗi nạp model: {e}")
 
-# DANH SÁCH TRẮNG (WHITELIST) TẠM THỜI
-# Giúp khắc phục ngay lập tức lỗi chặn nhầm thumbnail Dân Trí
 DOMAIN_WHITELIST = ["dantri.com.vn", "vnexpress.net", "vietnamnet.vn"]
 
 
@@ -35,11 +31,9 @@ DOMAIN_WHITELIST = ["dantri.com.vn", "vnexpress.net", "vietnamnet.vn"]
 async def predict(req: dict):
     url = req.get('url', '')
 
-    # 1. Kiểm tra nhanh Whitelist (Bỏ qua nếu là ảnh nội bộ sạch)
     if any(domain in url for domain in DOMAIN_WHITELIST):
         return {"is_ad": False, "probability": 0.0, "reason": "whitelist"}
 
-    # 2. Tính toán đặc trưng (Thêm xử lý tránh chia cho 0)
     depth = req.get('dom_depth', 0)
     url_len = req.get('url_length', 0)
 
@@ -49,11 +43,8 @@ async def predict(req: dict):
     df = pd.DataFrame([req])
     df = df.reindex(columns=features, fill_value=0)
 
-    # 3. Dự đoán xác suất
     prob = model.predict_proba(df)[0][1]
 
-    # CHIẾN THUẬT NGƯỠNG (THRESHOLD)
-    # Với Precision 0.62, ta nên nâng ngưỡng lên 0.85 để an toàn hơn
     threshold = 0.85
     is_ad = 1 if prob >= threshold else 0
 

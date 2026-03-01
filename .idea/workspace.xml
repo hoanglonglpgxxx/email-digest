@@ -5,14 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1a0bb982-edb8-48b8-92e7-487c6908fde0" name="Changes" comment="update">
-      <change afterPath="$PROJECT_DIR$/adblocker_ML/2026/dataset_01032026.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adblocker_ML/2026/trainer_drop_2cols.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/email-digest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/email-digest.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adblocker_ML/adsblocker_ext/background.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adblocker_ML/adsblocker_ext/offscreen.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adblocker_ML/2026/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/adblocker_ML/2026/readme.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/adblocker_ML/2026/server_29022026.py" beforeDir="false" afterPath="$PROJECT_DIR$/adblocker_ML/2026/server_29022026.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adblocker_ML/2026/trainer.py" beforeDir="false" afterPath="$PROJECT_DIR$/adblocker_ML/2026/trainer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adblocker_ML/adsblocker_ext/content.js" beforeDir="false" afterPath="$PROJECT_DIR$/adblocker_ML/adsblocker_ext/content.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adblocker_ML/adsblocker_ext/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/adblocker_ML/adsblocker_ext/manifest.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -357,7 +355,7 @@
       <workItem from="1766998599001" duration="3729000" />
       <workItem from="1772264852530" duration="2457000" />
       <workItem from="1772296368123" duration="3814000" />
-      <workItem from="1772334802204" duration="2306000" />
+      <workItem from="1772334802204" duration="6831000" />
     </task>
     <task id="LOCAL-00001" summary="upupup">
       <option name="closed" value="true" />
@@ -463,7 +461,15 @@
       <option name="project" value="LOCAL" />
       <updated>1771850074882</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="update">
+      <option name="closed" value="true" />
+      <created>1772337498363</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1772337498363</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -487,11 +493,11 @@
     <MESSAGE value="update multi-links input for soundcloud-downloader" />
     <MESSAGE value="update multi-links input for soundcloud-downloader-2" />
     <MESSAGE value="update add calendar_ics maker" />
-    <MESSAGE value="update" />
     <MESSAGE value="done dbscan algo" />
     <MESSAGE value="up" />
     <MESSAGE value="upupupup" />
-    <option name="LAST_COMMIT_MESSAGE" value="upupupup" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -510,7 +516,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/email_digest$face_recog.coverage" NAME="face_recog Coverage Results" MODIFIED="1756450858478" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/computer_vision" />
-    <SUITE FILE_PATH="coverage/email_digest$server_29022026__1_.coverage" NAME="server_29022026 (1) Coverage Results" MODIFIED="1772336798187" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/adblocker_ML/2026" />
+    <SUITE FILE_PATH="coverage/email_digest$server_29022026__1_.coverage" NAME="server_29022026 (1) Coverage Results" MODIFIED="1772342430486" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/adblocker_ML/2026" />
     <SUITE FILE_PATH="coverage/email_digest$main__3_.coverage" NAME="main (3) Coverage Results" MODIFIED="1765782705592" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/calendar_ics" />
     <SUITE FILE_PATH="coverage/email_digest$data_handling.coverage" NAME="data_handling Coverage Results" MODIFIED="1731575951619" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/population_research" />
     <SUITE FILE_PATH="coverage/email_digest$Doctests_in___init__.coverage" NAME="Doctests in __init__ Coverage Results" MODIFIED="1732202655476" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/AppData/Local/Packages/PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0/LocalCache/local-packages/Python311/site-packages/underthesea/pipeline/sentiment" />
