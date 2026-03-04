@@ -14,7 +14,7 @@ app.add_middleware(
 )
 
 # Load model bạn đã train
-data = joblib.load('2026_value_5.joblib')
+data = joblib.load('data_enriched_v1.joblib')
 model = data['model']
 features = data['features']
 
@@ -29,7 +29,7 @@ async def predict(req: dict):
     df = df.reindex(columns=features, fill_value=0)
 
     prob = model.predict_proba(df)[0][1]
-    is_ad = 1 if prob >= 0.8 else 0
+    is_ad = 1 if prob >= 0.7 else 0
 
     return {"is_ad": bool(is_ad), "probability": float(prob)}
 
