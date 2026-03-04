@@ -66,7 +66,7 @@ function showBlockedPlaceholder(el) {
 // 3. Quét và dự đoán bằng mô hình Advanced
 async function scanAndBlock() {
     // Chỉ quét các phần tử dễ là Ads
-    const elements = document.querySelectorAll("img, iframe, ins.adsbygoogle");
+    const elements = document.querySelectorAll("img, iframe, ins.adsbygoogle, div[id*='ads']");
 
     for (let el of elements) {
         if (el.dataset.aiChecked) continue;
