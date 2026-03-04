@@ -1,15 +1,23 @@
 {
   "manifest_version": 3,
-  "name": "NodeShield AI Guard",
-  "version": "1.0",
-  "description": "Bảo vệ trình duyệt bằng AI dựa trên cấu trúc DOM",
-  "permissions": ["declarativeNetRequest", "offscreen", "webRequest"],
-  "host_permissions": ["<all_urls>"],
-  "background": { "service_worker": "background.js" },
+  "name": "NodeShield AI AdBlocker",
+  "version": "2.0",
+  "permissions": [
+    "declarativeNetRequest",
+    "webRequest",
+    "offscreen"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["content.js"]
+      "js": ["content.js"],
+      "run_at": "document_end"
     }
   ]
 }
