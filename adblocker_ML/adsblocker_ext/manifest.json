@@ -1,14 +1,17 @@
 {
   "manifest_version": 3,
-  "name": "NodeShield AI AdBlocker",
+  "name": "AI Adblocker",
   "version": "2.0",
   "permissions": [
     "declarativeNetRequest",
     "webRequest",
-    "offscreen"
+    "offscreen",
+    "storage",
+    "activeTab"
   ],
   "host_permissions": [
-    "<all_urls>"
+    "<all_urls>",
+    "http://127.0.0.1:8000/*"
   ],
   "background": {
     "service_worker": "background.js"
@@ -16,8 +19,7 @@
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["content.js"],
-      "run_at": "document_end"
+      "js": ["content.js"]
     }
   ]
 }

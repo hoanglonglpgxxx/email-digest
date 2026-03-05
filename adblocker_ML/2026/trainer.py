@@ -1,80 +1,115 @@
 import pandas as pd
-import numpy as np
 import joblib
+import seaborn as sns
+import numpy as np
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import classification_report, accuracy_score
+from sklearn.metrics import classification_report, accuracy_score, confusion_matrix
+from imblearn.over_sampling import SMOTE
 from collections import Counter
 import matplotlib.pyplot as plt
 
-# 1. Nạp dữ liệu
+# ==============================================================================
+# 1. NẠP DỮ LIỆU
+# ==============================================================================
 try:
-    df = pd.read_csv('data_enrich.csv')
+    df = pd.read_csv('dataset_01032026.csv')
+    df.dropna(inplace=True) # Xử lý nhiễu/NaN để tránh lỗi SMOTE
     print("✅ Đã nạp file thành công!")
 except FileNotFoundError:
-    print("❌ Lỗi: Hãy upload file 'data_enrich.csv' vào Colab.")
+    print("❌ Lỗi: Hãy upload file dữ liệu vào thư mục hiện tại.")
     raise
 
-# 2. Tạo đặc trưng phái sinh (Feature Engineering)
+# ==============================================================================
+# 2. TẠO ĐẶC TRƯNG PHÁI SINH
+# ==============================================================================
 df['structure_density'] = df['num_siblings'] / (df['dom_depth'] + 1)
 df['url_complexity'] = df['num_special_chars'] / (df['url_length'] + 1)
 
-# Tiền xử lý Categorical
-if 'request_type' in df.columns:
-    df_numeric = pd.get_dummies(df, columns=['request_type'])
-else:
-    df_numeric = df.copy()
+# ⚡ ĐIỂM KHÁC BIỆT CỦA TẬP 2: CHỈ XÓA CÁC CỘT TEXT.
+# CỐ TÌNH GIỮ LẠI dom_depth, num_siblings, num_children
+cols_to_drop = ['is_ad', 'url', 'domain', 'target_url']
 
-# -------------------------------------------------------------
-# ⚡ SỬA LỖI 1: BẮT BUỘC XÓA CÁC CỘT LÀM MÔ HÌNH HỌC VẸT
-# -------------------------------------------------------------
-cols_to_drop = [
-    'is_ad', 'url', 'domain', 'target_url',
-    'dom_depth', 'num_siblings'   # <--- Đưa vào để ép model dùng data làm giàu
-]
-X = df_numeric.drop(columns=[col for col in cols_to_drop if col in df_numeric.columns])
-y = df_numeric['is_ad']
+X = df.drop(columns=[col for col in cols_to_drop if col in df.columns])
+y = df['is_ad']
 
-# 3. CHIA TẬP DỮ LIỆU
+# ==============================================================================
+# 3. CHIA TẬP VÀ ÁP DỤNG SMOTE
+# ==============================================================================
+# Chia Train/Test TRƯỚC KHI dùng SMOTE để chống rò rỉ dữ liệu
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-print(f"📊 Dữ liệu tập Train: {Counter(y_train)}")
+print(f"📊 Dữ liệu tập Train (Trước SMOTE): {Counter(y_train)}")
 
-# -------------------------------------------------------------
-# ⚡ SỬA LỖI 2 & 3: BỎ SMOTE VÀ TINH CHỈNH HYPERPARAMETERS
-# -------------------------------------------------------------
-rf_model = RandomForestClassifier(
+# Áp dụng SMOTE để sinh mẫu ảo cho Tập 2
+smote = SMOTE(random_state=42)
+X_train_resampled, y_train_resampled = smote.fit_resample(X_train, y_train)
+print(f"⚖️ Dữ liệu tập Train (SAU SMOTE): {Counter(y_train_resampled)}")
+
+# ==============================================================================
+# 4. HUẤN LUYỆN MÔ HÌNH 2 (MÔ HÌNH BỊ HỌC VẸT)
+# ==============================================================================
+# Không giới hạn max_depth, không dùng class_weight để mô hình học thuộc lòng dom_depth
+rf_model_2 = RandomForestClassifier(
     n_estimators=300,
-    max_depth=12,            # Tăng nhẹ độ sâu để model học được các quy luật JS tinh vi
-    min_samples_leaf=15,     # Giảm xuống 15 để tránh Underfitting (không để 100)
-    max_features='log2',     # Ép thuật toán phải nhìn vào các đặc trưng JavaScript mới
-    class_weight='balanced_subsample', # Thay thế hoàn hảo cho SMOTE đối với Random Forest
     random_state=42,
     n_jobs=-1
 )
 
-print("⏳ Đang huấn luyện mô hình (Không dùng SMOTE, dùng Class Weight)...")
-rf_model.fit(X_train, y_train)
+print("\n⏳ Đang huấn luyện Mô hình 2 (Dữ liệu Lai thô + SMOTE)...")
+rf_model_2.fit(X_train_resampled, y_train_resampled)
 
-# 4. Đánh giá trên tập TEST thực tế
-y_pred = rf_model.predict(X_test)
+# ==============================================================================
+# 5. ĐÁNH GIÁ TRÊN TẬP TEST
+# ==============================================================================
+y_pred = rf_model_2.predict(X_test)
 print("\n" + "="*30)
-print(f"🎯 ĐỘ CHÍNH XÁC THỰC TẾ: {accuracy_score(y_test, y_pred)*100:.2f}%")
+print(f"🎯 ĐỘ CHÍNH XÁC (MÔ HÌNH 2): {accuracy_score(y_test, y_pred)*100:.2f}%")
 print("="*30)
 print("\n--- BÁO CÁO CHI TIẾT ---")
 print(classification_report(y_test, y_pred))
 
-# 5. XUẤT FILE JOBLIB
-storage = {
-    'model': rf_model,
+# ==============================================================================
+# 6. XUẤT FILE JOBLIB THEO YÊU CẦU
+# ==============================================================================
+storage_model2 = {
+    'model': rf_model_2,
     'features': X.columns.tolist()
 }
-joblib.dump(storage, 'data_enriched_v1.joblib')
-print("\n✅ Đã lưu model vào file: data_enriched_v1.joblib")
+joblib.dump(storage_model2, 'model_raw_smote.joblib')
+print("\n✅ Đã lưu model Tập 2 vào file: model_raw_smote.joblib")
+print("⚠️ LƯU Ý KHI TEST: Mô hình này yêu cầu ĐẦY ĐỦ các cột đầu vào (bao gồm cả dom_depth, num_siblings).")
 
-# 6. Trực quan hóa Feature Importance
-plt.figure(figsize=(10, 6))
-importances = pd.Series(rf_model.feature_importances_, index=X.columns)
-importances.nlargest(10).sort_values().plot(kind='barh', color='darkred')
-plt.title("Top 10 Đặc trưng quan trọng (Tập Data Làm Giàu)")
-plt.xlabel("Lượng thông tin thu được (Information Gain)")
+# ==============================================================================
+# 7. TRỰC QUAN HÓA FEATURE IMPORTANCE
+# ==============================================================================
+plt.figure(figsize=(12, 7))
+importances = pd.Series(rf_model_2.feature_importances_, index=X.columns)
+# Dùng màu darkorange để phân biệt với Tập 3
+importances.nlargest(10).sort_values().plot(kind='barh', color='darkorange', edgecolor='black')
+
+plt.title("Hình 1. Top 10 Đặc trưng quan trọng - Mô hình 2 (Bị học vẹt Layout)", fontsize=14)
+plt.xlabel("Lượng thông tin thu được (Information Gain)", fontsize=12)
+plt.grid(axis='x', linestyle='--', alpha=0.7)
+
+# Lưu ảnh chất lượng cao để chèn vào Word
+plt.savefig('feature_importance_model2.png', dpi=300, bbox_inches='tight')
+print("✅ Đã lưu ảnh: feature_importance_model2.png")
+plt.show()
+
+# ==============================================================================
+# 8. TRỰC QUAN HÓA MA TRẬN NHẦM LẪN
+# ==============================================================================
+plt.figure(figsize=(8, 6))
+cm = confusion_matrix(y_test, y_pred)
+sns.heatmap(cm, annot=True, fmt="d", cmap="Oranges",
+            xticklabels=['Sạch (0)', 'Quảng cáo (1)'],
+            yticklabels=['Sạch (0)', 'Quảng cáo (1)'])
+
+plt.title("Hình 2. Ma trận nhầm lẫn - Mô hình 2 (Dùng SMOTE)", fontsize=14)
+plt.xlabel("Nhãn dự đoán (Predicted)", fontsize=12)
+plt.ylabel("Nhãn thực tế (Actual)", fontsize=12)
+
+# Lưu ảnh ma trận nhầm lẫn
+plt.savefig('confusion_matrix_model2.png', dpi=300, bbox_inches='tight')
+print("✅ Đã lưu ảnh: confusion_matrix_model2.png")
 plt.show()
