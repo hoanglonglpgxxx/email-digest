@@ -47,15 +47,13 @@ def load_and_clean_data(filepath="ad.data"):
 def prepare_data(df):
     print("\n[2/6] Splitting Train/Test sets...")
 
-    # Convert label: "ad." -> 1, "nonad." -> 0
     df["label"] = df["label"].apply(lambda x: 1 if str(x).strip() == "ad." else 0)
 
-    # Separate Features (X) and Target (y)
     X = df.drop("label", axis=1).values
     y = df["label"].values
 
-    # Split data (80% Train, 20% Test)
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+    # ✅ Giữ đúng như sách: default 75/25, không set random_state
+    X_train, X_test, y_train, y_test = train_test_split(X, y)
 
     return X_train, X_test, y_train, y_test
 
@@ -63,11 +61,11 @@ def prepare_data(df):
 # --- 3. FUNCTION: TRAIN MODEL ---
 def train_model(X_train, y_train):
     print("\n[3/6] Training Random Forest Classifier...")
-    # n_estimators=100: Create 100 decision trees
-    clf = RandomForestClassifier(n_estimators=100, random_state=42)
+
+    # ✅ Giữ đúng như sách: không set n_estimators, không set random_state
+    clf = RandomForestClassifier()
     clf.fit(X_train, y_train)
     return clf
-
 
 # --- 4. FUNCTION: EVALUATE MODEL (CROSS-VALIDATION) ---
 def evaluate_model(clf, X_train, y_train, X_test, y_test):
@@ -206,7 +204,7 @@ def main():
 
     # 7. Save Model
     print("\nSaving model...")
-    joblib.dump(clf, 'ad_blocker_model.joblib')
+    joblib.dump(clf, 'original_dataset.joblib')
     print("--> COMPLETED! Model saved successfully.")
 
 
