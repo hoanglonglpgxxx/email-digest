@@ -1,4 +1,8 @@
-// --- CÁC HÀM TRÍCH XUẤT ĐẶC TRƯNG URL ---
+// ==============================================================================
+// 1. CÁC HÀM PHỤ TRỢ (BẮT BUỘC PHẢI CÓ TRONG BACKGROUND.JS)
+// ==============================================================================
+
+// Hàm tính toán Entropy để nhận diện DGA hoặc URL làm rối
 function getEntropy(str) {
     if (!str) return 0;
     const len = str.length;
@@ -12,12 +16,14 @@ function getEntropy(str) {
     return entropy;
 }
 
+// Hàm đếm ký tự đặc biệt để đánh giá độ phức tạp URL
 function countSpecialChars(str) {
     if (!str) return 0;
     const specialChars = str.match(/[^a-zA-Z0-9]/g);
     return specialChars ? specialChars.length : 0;
 }
 
+// Hàm kiểm tra Third-party dựa trên Domain gốc
 function isThirdParty(url, initiator) {
     try {
         if (!initiator) return 1;
@@ -27,75 +33,44 @@ function isThirdParty(url, initiator) {
     } catch (e) { return 0; }
 }
 
-// --- QUẢN LÝ OFFSCREEN DOCUMENT ---
-let creating;
-async function setupOffscreenDocument(path) {
-    const offscreenUrl = chrome.runtime.getURL(path);
-    const existingContexts = await chrome.runtime.getContexts({
-        contextTypes: ['OFFSCREEN_DOCUMENT'],
-        documentUrls: [offscreenUrl]
-    });
-    if (existingContexts.length > 0) return;
-    if (creating) {
-        await creating;
-    } else {
-        creating = chrome.offscreen.createDocument({
-            url: path,
-            reasons: ['WORKERS'],
-            justification: 'Chạy mô hình AI ONNX để dự đoán URL'
-        });
-        await creating;
-        creating = null;
+// ==============================================================================
+// 2. LẮNG NGHE YÊU CẦU VÀ GIAO TIẾP API
+// ==============================================================================
+
+chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+    if (request.action === "predict_ad") {
+        // Background đóng vai trò Proxy để vượt rào cản CORS/Mixed Content
+        fetch("http://127.0.0.1:8000/predict", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(request.data)
+        })
+        .then(res => res.json())
+        .then(data => sendResponse({ success: true, data: data }))
+        .catch(err => sendResponse({ success: false, error: err.message }));
+
+        return true; // Giữ kênh giao tiếp bất đồng bộ
     }
-}
+});
 
-// Gửi dữ liệu sang Off-screen để AI phân tích
-async function checkWithAI(features) {
-    await setupOffscreenDocument('offscreen.html');
-    return new Promise((resolve) => {
-        chrome.runtime.sendMessage(
-            { type: "AI_PREDICT", features: features },
-            (response) => resolve(response ? response.isAd : false)
-        );
-    });
-}
-
-// --- LẮNG NGHE YÊU CẦU MẠNG ---
+// Lắng nghe sự kiện mạng để phân tích bằng mô hình ONNX (Network Layer)
 chrome.webRequest.onBeforeRequest.addListener(
-    async (details) => {
-        if (details.type === "image" || details.type === "sub_frame" || details.type === "script") {
+    (details) => {
+        if (["image", "sub_frame", "script"].includes(details.type)) {
             const url = details.url;
-
-            // Bỏ qua các URL dạng data: base64
             if (url.startsWith("data:")) return;
 
-            const features = {
+            // Tại đây getEntropy đã được định nghĩa và có thể sử dụng
+            const netFeatures = {
                 url_length: url.length,
                 entropy: getEntropy(url),
                 num_special_chars: countSpecialChars(url),
                 is_3rd_party: isThirdParty(url, details.initiator)
-                // Đảm bảo số lượng features này khớp với Tensor [1, 4] hoặc [1, 8] của model ONNX
             };
 
-            const isAd = await checkWithAI(features);
-
-            if (isAd) {
-                console.log(`[Network Layer] Phát hiện Ads URL, tạo luật chặn: ${url.substring(0, 50)}...`);
-                // Tạo luật chặn động bằng declarativeNetRequest
-                const ruleId = Math.floor(Math.random() * 90000) + 10000; // Tránh trùng ID
-                chrome.declarativeNetRequest.updateDynamicRules({
-                    addRules: [{
-                        id: ruleId,
-                        priority: 1,
-                        action: {type: "block"},
-                        condition: {
-                            urlFilter: url.split('?')[0], // Chặn theo base URL để tăng tính tổng quát
-                            resourceTypes: ["image", "sub_frame", "script"]
-                        }
-                    }]
-                });
-            }
+            console.log("[Network Layer] Đang phân tích URL:", url.substring(0, 50));
+            // Tiến trình gọi Offscreen document để chạy ONNX...
         }
     },
-    {urls: ["<all_urls>"]}
+    { urls: ["<all_urls>"] }
 );

@@ -4,13 +4,37 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a0bb982-edb8-48b8-92e7-487c6908fde0" name="Changes" comment="upupupup">
+    <list default="true" id="1a0bb982-edb8-48b8-92e7-487c6908fde0" name="Changes" comment="upupupupupupup">
+      <change afterPath="$PROJECT_DIR$/adblocker_ML/2026/get_data_1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adblocker_ML/2026/get_data_2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adblocker_ML/2026/get_data_3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adblocker_ML/2026/trainer3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adblocker_ML/handle data/imputation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adblocker_ML/handle data/pre_handle.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adblocker_ML/handle data/remove_blank_data.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/email-digest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/email-digest.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adblocker_ML/cross_validation_report.csv" beforeDir="false" afterPath="$PROJECT_DIR$/adblocker_ML/cross_validation_report.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adblocker_ML/2026/2026_train_01032026.joblib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/adblocker_ML/2026/2026_train_rf_optimized.joblib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/adblocker_ML/2026/2026_value.joblib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/adblocker_ML/2026/2026_value_2.joblib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/adblocker_ML/2026/2026_value_3.joblib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/adblocker_ML/2026/2026_value_4.joblib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/adblocker_ML/2026/2026_value_5.joblib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/adblocker_ML/2026/checkdata.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/adblocker_ML/2026/data_enriched_v1.joblib" beforeDir="false" afterPath="$PROJECT_DIR$/adblocker_ML/2026/data_enriched_v1.joblib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adblocker_ML/2026/nodeshield_rf_v26_advanced.joblib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/adblocker_ML/2026/server_29022026.py" beforeDir="false" afterPath="$PROJECT_DIR$/adblocker_ML/2026/server_29022026.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adblocker_ML/2026/tester.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/adblocker_ML/2026/trainer.py" beforeDir="false" afterPath="$PROJECT_DIR$/adblocker_ML/2026/trainer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adblocker_ML/2026/trainer_drop_2cols.py" beforeDir="false" afterPath="$PROJECT_DIR$/adblocker_ML/2026/trainer_drop_2cols.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adblocker_ML/adsblocker_ext/background.js" beforeDir="false" afterPath="$PROJECT_DIR$/adblocker_ML/adsblocker_ext/background.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adblocker_ML/adsblocker_ext/content (2).md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/adblocker_ML/adsblocker_ext/content.js" beforeDir="false" afterPath="$PROJECT_DIR$/adblocker_ML/adsblocker_ext/content.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adblocker_ML/adsblocker_ext/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/adblocker_ML/adsblocker_ext/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adblocker_ML/adsblocker_ext/offscreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/adblocker_ML/adsblocker_ext/offscreen.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/adblocker_ML/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/adblocker_ML/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adblocker_ML/test_latest.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +74,9 @@
     &quot;assignee&quot;: &quot;hoanglonglpgxxx&quot;
   }
 }</component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="cf9cd9e6-271e-4fe2-b395-9f3e9fd36a5d" />
+  </component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/hoanglonglpgxxx/email-digest.git&quot;,
@@ -136,7 +163,7 @@
     &quot;ts.external.directory.path&quot;: &quot;D:\\PyCharm 2025.3.3\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\hoang\PycharmProjects\email-digest\adblocker_ML\2026" />
@@ -163,30 +190,6 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/adblocker_ML/2026" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="RUN_TOOL" value="" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/adblocker_ML/2026/checkdata.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="email-digest" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/adblocker_ML" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -194,30 +197,6 @@
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="RUN_TOOL" value="" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/adblocker_ML/main.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="server_29022026 (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="email-digest" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/adblocker_ML/2026" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="RUN_TOOL" value="" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/adblocker_ML/2026/server_29022026.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -235,13 +214,13 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/adblocker_ML" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/adblocker_ML/2026" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="RUN_TOOL" value="" />
-      <option name="SCRIPT_NAME" value="C:\Users\hoang\PycharmProjects\email-digest\adblocker_ML\2026\server_29022026.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/adblocker_ML/2026/server_29022026.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -266,6 +245,54 @@
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="RUN_TOOL" value="" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/adblocker_ML/2026/trainer.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="trainer3" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="email-digest" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/adblocker_ML/2026" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="RUN_TOOL" value="" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/adblocker_ML/2026/trainer3.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="trainer_drop_2cols" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="email-digest" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/adblocker_ML/2026" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="RUN_TOOL" value="" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/adblocker_ML/2026/trainer_drop_2cols.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -477,7 +504,15 @@
       <option name="project" value="LOCAL" />
       <updated>1772631240085</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="upupupupupupup">
+      <option name="closed" value="true" />
+      <created>1772637588788</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1772637588788</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -505,7 +540,8 @@
     <MESSAGE value="done dbscan algo" />
     <MESSAGE value="up" />
     <MESSAGE value="upupupup" />
-    <option name="LAST_COMMIT_MESSAGE" value="upupupup" />
+    <MESSAGE value="upupupupupupup" />
+    <option name="LAST_COMMIT_MESSAGE" value="upupupupupupup" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
