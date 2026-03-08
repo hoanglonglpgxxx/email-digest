@@ -1,187 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a0bb982-edb8-48b8-92e7-487c6908fde0" name="Changes" comment="upupupupupupup">
-      <change afterPath="$PROJECT_DIR$/adblocker_ML/2026/get_data_1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adblocker_ML/2026/get_data_2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adblocker_ML/2026/get_data_3.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adblocker_ML/2026/trainer3.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adblocker_ML/handle data/imputation.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adblocker_ML/handle data/pre_handle.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adblocker_ML/handle data/remove_blank_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/email-digest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/email-digest.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adblocker_ML/2026/2026_train_01032026.joblib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/adblocker_ML/2026/2026_train_rf_optimized.joblib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/adblocker_ML/2026/2026_value.joblib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/adblocker_ML/2026/2026_value_2.joblib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/adblocker_ML/2026/2026_value_3.joblib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/adblocker_ML/2026/2026_value_4.joblib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/adblocker_ML/2026/2026_value_5.joblib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/adblocker_ML/2026/checkdata.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/adblocker_ML/2026/data_enriched_v1.joblib" beforeDir="false" afterPath="$PROJECT_DIR$/adblocker_ML/2026/data_enriched_v1.joblib" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adblocker_ML/2026/nodeshield_rf_v26_advanced.joblib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/adblocker_ML/2026/server_29022026.py" beforeDir="false" afterPath="$PROJECT_DIR$/adblocker_ML/2026/server_29022026.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adblocker_ML/2026/tester.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/adblocker_ML/2026/trainer.py" beforeDir="false" afterPath="$PROJECT_DIR$/adblocker_ML/2026/trainer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adblocker_ML/2026/trainer_drop_2cols.py" beforeDir="false" afterPath="$PROJECT_DIR$/adblocker_ML/2026/trainer_drop_2cols.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adblocker_ML/adsblocker_ext/background.js" beforeDir="false" afterPath="$PROJECT_DIR$/adblocker_ML/adsblocker_ext/background.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adblocker_ML/adsblocker_ext/content (2).md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/adblocker_ML/adsblocker_ext/content.js" beforeDir="false" afterPath="$PROJECT_DIR$/adblocker_ML/adsblocker_ext/content.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adblocker_ML/adsblocker_ext/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/adblocker_ML/adsblocker_ext/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adblocker_ML/adsblocker_ext/offscreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/adblocker_ML/adsblocker_ext/offscreen.js" afterDir="false" />
+    <list default="true" id="9ae9bc3f-0128-4e57-8c8a-e52c515740b1" name="Changes" comment="upupupupupupup">
+      <change beforePath="$PROJECT_DIR$/adblocker_ML/cross_validation_report.csv" beforeDir="false" afterPath="$PROJECT_DIR$/adblocker_ML/cross_validation_report.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/adblocker_ML/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/adblocker_ML/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adblocker_ML/original_dataset.joblib" beforeDir="false" afterPath="$PROJECT_DIR$/adblocker_ML/original_dataset.joblib" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Python Script" />
-        <option value="TypeScript File" />
-      </list>
-    </option>
-  </component>
-  <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
-    <envs>
-      <env key="FLASK_APP" value="app" />
-    </envs>
-    <option name="myCustomStartScript" value="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))" />
-    <option name="myEnvs">
-      <map>
-        <entry key="FLASK_APP" value="app" />
-      </map>
-    </option>
-  </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="master" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;hoanglonglpgxxx&quot;
-  }
-}</component>
-  <component name="GithubDefaultAccount">
-    <option name="defaultAccountId" value="cf9cd9e6-271e-4fe2-b395-9f3e9fd36a5d" />
-  </component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/hoanglonglpgxxx/email-digest.git&quot;,
-    &quot;accountId&quot;: &quot;417749e1-1446-4df7-a769-44dbe1984c4e&quot;
-  },
-  &quot;recentNewPullRequestHead&quot;: {
-    &quot;server&quot;: {
-      &quot;useHttp&quot;: false,
-      &quot;host&quot;: &quot;github.com&quot;,
-      &quot;port&quot;: null,
-      &quot;suffix&quot;: null
-    },
-    &quot;owner&quot;: &quot;hoanglonglpgxxx&quot;,
-    &quot;repository&quot;: &quot;email-digest&quot;
-  }
-}</component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 0
-}</component>
-  <component name="ProjectId" id="2obTtdOtayV3EkO50RrEWxnAguL" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
-  </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;HTTP Request.All in generated-requests.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.index.html.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Doctests in __init__.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Doctests in validation.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in test.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python.__init__.executor&quot;: &quot;Run&quot;,
-    &quot;Python.astro_api.executor&quot;: &quot;Run&quot;,
-    &quot;Python.checkdata.executor&quot;: &quot;Run&quot;,
-    &quot;Python.data_handling.executor&quot;: &quot;Run&quot;,
-    &quot;Python.dbscan.executor&quot;: &quot;Run&quot;,
-    &quot;Python.face_recog.executor&quot;: &quot;Run&quot;,
-    &quot;Python.file_converter.executor&quot;: &quot;Run&quot;,
-    &quot;Python.get_response.executor&quot;: &quot;Debug&quot;,
-    &quot;Python.handle_static_data.executor&quot;: &quot;Run&quot;,
-    &quot;Python.hotel.executor&quot;: &quot;Run&quot;,
-    &quot;Python.kmeans (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.latest_trainer.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.main (2).executor&quot;: &quot;Run&quot;,
-    &quot;Python.main (3).executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.new_trainer.executor&quot;: &quot;Run&quot;,
-    &quot;Python.predict.executor&quot;: &quot;Run&quot;,
-    &quot;Python.predict_modern.executor&quot;: &quot;Run&quot;,
-    &quot;Python.read.executor&quot;: &quot;Run&quot;,
-    &quot;Python.rophim.executor&quot;: &quot;Run&quot;,
-    &quot;Python.samp.executor&quot;: &quot;Run&quot;,
-    &quot;Python.send_email.executor&quot;: &quot;Run&quot;,
-    &quot;Python.server.executor&quot;: &quot;Run&quot;,
-    &quot;Python.server_29022026 (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.server_29022026.executor&quot;: &quot;Run&quot;,
-    &quot;Python.test.executor&quot;: &quot;Run&quot;,
-    &quot;Python.test_latest.executor&quot;: &quot;Run&quot;,
-    &quot;Python.train_url_only.executor&quot;: &quot;Run&quot;,
-    &quot;Python.trainer.executor&quot;: &quot;Run&quot;,
-    &quot;Python.trainer_v8.executor&quot;: &quot;Run&quot;,
-    &quot;Python.weather_forecast.executor&quot;: &quot;Run&quot;,
-    &quot;Python.weather_history.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
-    &quot;ai.playground.ignore.import.keys.banner.in.settings&quot;: &quot;true&quot;,
-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/DELL/email-digest&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;D:\\PyCharm 2025.3.3\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.main.executor": "Run",
+    "git-widget-placeholder": "preprod"
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\hoang\PycharmProjects\email-digest\adblocker_ML\2026" />
-      <recent name="C:\Users\hoang\PycharmProjects\email-digest\adblocker_ML" />
-      <recent name="F:\email-digest\calendar_ics" />
-      <recent name="F:\email-digest" />
-      <recent name="F:\email-digest\computer_vision" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\hoang\PycharmProjects\email-digest\adblocker_ML\2026" />
-      <recent name="C:\Users\hoang\PycharmProjects\email-digest\adblocker_ML" />
-      <recent name="F:\email-digest\calendar_ics" />
-      <recent name="F:\email-digest\stock_crawler" />
-      <recent name="E:\email-digest" />
-    </key>
-  </component>
-  <component name="RunManager" selected="Python.main">
-    <configuration name="checkdata" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="email-digest" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -205,393 +48,49 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="server_29022026" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="email-digest" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/adblocker_ML/2026" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="RUN_TOOL" value="" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/adblocker_ML/2026/server_29022026.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="trainer" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="email-digest" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/adblocker_ML/2026" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="RUN_TOOL" value="" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/adblocker_ML/2026/trainer.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="trainer3" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="email-digest" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/adblocker_ML/2026" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="RUN_TOOL" value="" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/adblocker_ML/2026/trainer3.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="trainer_drop_2cols" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="email-digest" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/adblocker_ML/2026" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="RUN_TOOL" value="" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/adblocker_ML/2026/trainer_drop_2cols.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Python.main" />
-        <item itemvalue="Python.server_29022026 (1)" />
-        <item itemvalue="Python.trainer" />
-        <item itemvalue="Python.checkdata" />
-        <item itemvalue="Python.server_29022026" />
       </list>
     </recent_temporary>
   </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-PY-253.31033.139" />
-        <option value="bundled-python-sdk-2653e85de345-6d6dccd035ac-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-253.31033.139" />
-      </set>
-    </attachedChunks>
-  </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="1a0bb982-edb8-48b8-92e7-487c6908fde0" name="Changes" comment="" />
-      <created>1731137490545</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1731137490545</updated>
-      <workItem from="1731137491953" duration="4752000" />
-      <workItem from="1731311736937" duration="5337000" />
-      <workItem from="1731321450680" duration="16000" />
-      <workItem from="1731402664416" duration="5103000" />
-      <workItem from="1731469065823" duration="14234000" />
-      <workItem from="1731569821774" duration="9237000" />
-      <workItem from="1731640126686" duration="16196000" />
-      <workItem from="1731901163790" duration="16058000" />
-      <workItem from="1731988600097" duration="5153000" />
-      <workItem from="1732093216339" duration="6006000" />
-      <workItem from="1732184284783" duration="2370000" />
-      <workItem from="1732203610652" duration="248000" />
-      <workItem from="1732203866897" duration="87000" />
-      <workItem from="1732203993572" duration="33000" />
-      <workItem from="1732204043030" duration="301000" />
-      <workItem from="1732204354633" duration="310000" />
-      <workItem from="1732506947652" duration="133000" />
-      <workItem from="1735385171096" duration="678000" />
-      <workItem from="1736757667825" duration="1899000" />
-      <workItem from="1736818105056" duration="7662000" />
-      <workItem from="1737441281753" duration="4780000" />
-      <workItem from="1737512223022" duration="2000" />
-      <workItem from="1737531136526" duration="593000" />
-      <workItem from="1739324109491" duration="50000" />
-      <workItem from="1739409854745" duration="594000" />
-      <workItem from="1739843199490" duration="27000" />
-      <workItem from="1740221704081" duration="100000" />
-      <workItem from="1740450097560" duration="593000" />
-      <workItem from="1741311809594" duration="17000" />
-      <workItem from="1741676163495" duration="6000" />
-      <workItem from="1741917401239" duration="11000" />
-      <workItem from="1748829997455" duration="5000" />
-      <workItem from="1751885733672" duration="593000" />
-      <workItem from="1752119642276" duration="710000" />
-      <workItem from="1752122155054" duration="2047000" />
-      <workItem from="1754045508543" duration="1000" />
-      <workItem from="1756450153664" duration="864000" />
-      <workItem from="1756451054239" duration="138000" />
-      <workItem from="1756524455321" duration="5466000" />
-      <workItem from="1757046287394" duration="4248000" />
-      <workItem from="1757489703809" duration="75000" />
-      <workItem from="1758099756902" duration="560000" />
-      <workItem from="1760437386027" duration="804000" />
-      <workItem from="1765160852808" duration="800000" />
-      <workItem from="1765161689792" duration="126000" />
-      <workItem from="1765181147859" duration="927000" />
-      <workItem from="1765769424443" duration="655000" />
-      <workItem from="1765781383579" duration="2032000" />
-      <workItem from="1766030459661" duration="890000" />
-      <workItem from="1766998599001" duration="3729000" />
-      <workItem from="1772264852530" duration="2457000" />
-      <workItem from="1772296368123" duration="4652000" />
-      <workItem from="1772630088045" duration="2617000" />
-      <workItem from="1772847940009" duration="1207000" />
-      <workItem from="1772948297484" duration="677000" />
-      <workItem from="1772952518854" duration="3773000" />
-    </task>
-    <task id="LOCAL-00001" summary="upupup">
-      <option name="closed" value="true" />
-      <created>1756451172925</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1756451172925</updated>
-    </task>
-    <task id="LOCAL-00002" summary="up soundcloud_downloader">
-      <option name="closed" value="true" />
-      <created>1756528648007</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1756528648007</updated>
-    </task>
-    <task id="LOCAL-00003" summary="up stock_crawler demo">
-      <option name="closed" value="true" />
-      <created>1757048358359</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1757048358359</updated>
-    </task>
-    <task id="LOCAL-00004" summary="up stock_crawler demo">
-      <option name="closed" value="true" />
-      <created>1757048657671</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1757048657671</updated>
-    </task>
-    <task id="LOCAL-00005" summary="update multi-links input for soundcloud-downloader">
-      <option name="closed" value="true" />
-      <created>1760437558344</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1760437558344</updated>
-    </task>
-    <task id="LOCAL-00006" summary="update multi-links input for soundcloud-downloader-2">
-      <option name="closed" value="true" />
-      <created>1760438036786</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1760438036786</updated>
-    </task>
-    <task id="LOCAL-00007" summary="update add calendar_ics maker">
-      <option name="closed" value="true" />
-      <created>1765161755214</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1765161755214</updated>
-    </task>
-    <task id="LOCAL-00008" summary="update add calendar_ics maker">
-      <option name="closed" value="true" />
-      <created>1765181923608</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1765181923608</updated>
-    </task>
-    <task id="LOCAL-00009" summary="update add calendar_ics maker">
-      <option name="closed" value="true" />
-      <created>1765782908751</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1765782908751</updated>
-    </task>
-    <task id="LOCAL-00010" summary="done dbscan algo">
-      <option name="closed" value="true" />
-      <created>1767355535516</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1767355535516</updated>
-    </task>
-    <task id="LOCAL-00011" summary="up">
-      <option name="closed" value="true" />
-      <created>1770127711655</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1770127711655</updated>
-    </task>
-    <task id="LOCAL-00012" summary="up">
-      <option name="closed" value="true" />
-      <created>1770217174216</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1770217174216</updated>
-    </task>
-    <task id="LOCAL-00013" summary="upupupup">
-      <option name="closed" value="true" />
-      <created>1771850074882</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1771850074882</updated>
-    </task>
-    <task id="LOCAL-00014" summary="upupupup">
-      <option name="closed" value="true" />
-      <created>1772300331278</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1772300331278</updated>
-    </task>
-    <task id="LOCAL-00015" summary="upupupup">
-      <option name="closed" value="true" />
-      <created>1772631240085</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1772631240085</updated>
-    </task>
-    <task id="LOCAL-00016" summary="upupupupupupup">
-      <option name="closed" value="true" />
-      <created>1772637588788</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1772637588788</updated>
-    </task>
-    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="upupup" />
-    <MESSAGE value="up soundcloud_downloader" />
-    <MESSAGE value="up stock_crawler demo" />
-    <MESSAGE value="update multi-links input for soundcloud-downloader" />
-    <MESSAGE value="update multi-links input for soundcloud-downloader-2" />
-    <MESSAGE value="update add calendar_ics maker" />
-    <MESSAGE value="update" />
-    <MESSAGE value="done dbscan algo" />
-    <MESSAGE value="up" />
-    <MESSAGE value="upupupup" />
-    <MESSAGE value="upupupupupupup" />
-    <option name="LAST_COMMIT_MESSAGE" value="upupupupupupup" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/../AppData/Local/Packages/PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0/LocalCache/local-packages/Python311/site-packages/underthesea/pipeline/sentiment/bank/__init__.py</url>
-          <line>26</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/ML_in_cybersec/kmeans_backup.py</url>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/email_digest$get_data_2.coverage" NAME="get_data_2 Coverage Results" MODIFIED="1772718590560" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/adblocker_ML/2026" />
     <SUITE FILE_PATH="coverage/email_digest$weather_forecast.coverage" NAME="weather_forecast Coverage Results" MODIFIED="1731571113791" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/weather_forecast" />
     <SUITE FILE_PATH="coverage/email_digest$Doctests_in___init__.coverage" NAME="Doctests in __init__ Coverage Results" MODIFIED="1732202655476" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../AppData/Local/Packages/PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0/LocalCache/local-packages/Python311/site-packages/underthesea/pipeline/sentiment" />
     <SUITE FILE_PATH="coverage/email_digest$server_29022026__1_.coverage" NAME="server_29022026 (1) Coverage Results" MODIFIED="1772948965718" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/adblocker_ML/2026" />
     <SUITE FILE_PATH="coverage/email_digest$checkdata.coverage" NAME="checkdata Coverage Results" MODIFIED="1772298023351" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/adblocker_ML/2026" />
+    <SUITE FILE_PATH="coverage/email_digest$trainer3.coverage" NAME="trainer3 Coverage Results" MODIFIED="1772726378379" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/adblocker_ML/2026" />
     <SUITE FILE_PATH="coverage/email_digest$hotel.coverage" NAME="hotel Coverage Results" MODIFIED="1732355731295" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/hotel_booking" />
+    <SUITE FILE_PATH="coverage/email_digest$pre_handle.coverage" NAME="pre_handle Coverage Results" MODIFIED="1772720927657" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/adblocker_ML/handle data" />
     <SUITE FILE_PATH="coverage/email_digest$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1757047103083" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/soundcloud_downloader" />
     <SUITE FILE_PATH="coverage/email_digest$weather_history.coverage" NAME="weather_history Coverage Results" MODIFIED="1731491962079" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/weather_history" />
+    <SUITE FILE_PATH="coverage/email_digest$get_data_3.coverage" NAME="get_data_3 Coverage Results" MODIFIED="1772719461291" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/adblocker_ML/2026" />
     <SUITE FILE_PATH="coverage/email_digest$main__3_.coverage" NAME="main (3) Coverage Results" MODIFIED="1765782705592" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/calendar_ics" />
     <SUITE FILE_PATH="coverage/email_digest$face_recog.coverage" NAME="face_recog Coverage Results" MODIFIED="1756450858478" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/computer_vision" />
     <SUITE FILE_PATH="coverage/email_digest$dbscan.coverage" NAME="dbscan Coverage Results" MODIFIED="1767000723235" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ML_in_cybersec" />
     <SUITE FILE_PATH="coverage/email_digest$data_handling.coverage" NAME="data_handling Coverage Results" MODIFIED="1731575951619" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/population_research" />
     <SUITE FILE_PATH="coverage/email_digest$get_response.coverage" NAME="get_response Coverage Results" MODIFIED="1731657615643" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/weather_forecast" />
     <SUITE FILE_PATH="coverage/email_digest$file_converter.coverage" NAME="file_converter Coverage Results" MODIFIED="1731922134625" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/multi_func_tool" />
+    <SUITE FILE_PATH="coverage/email_digest$remove_blank_data.coverage" NAME="remove_blank_data Coverage Results" MODIFIED="1772721006748" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/adblocker_ML/handle data" />
     <SUITE FILE_PATH="coverage/email_digest$test.coverage" NAME="test Coverage Results" MODIFIED="1735385821509" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/email_digest$samp.coverage" NAME="samp Coverage Results" MODIFIED="1731319251589" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/weather_history" />
-    <SUITE FILE_PATH="coverage/email_digest$main.coverage" NAME="main Coverage Results" MODIFIED="1772954423387" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/adblocker_ML" />
+    <SUITE FILE_PATH="coverage/email_digest$main.coverage" NAME="main Coverage Results" MODIFIED="1772958330980" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/adblocker_ML" />
     <SUITE FILE_PATH="coverage/email_digest$server_29022026.coverage" NAME="server_29022026 Coverage Results" MODIFIED="1772296895670" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/adblocker_ML" />
     <SUITE FILE_PATH="coverage/email_digest$__init__.coverage" NAME="__init__ Coverage Results" MODIFIED="1732203280798" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../AppData/Local/Packages/PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0/LocalCache/local-packages/Python311/site-packages/underthesea/pipeline/sentiment/bank" />
     <SUITE FILE_PATH="coverage/email_digest$send_email.coverage" NAME="send_email Coverage Results" MODIFIED="1731140473011" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/email_digest$handle_static_data.coverage" NAME="handle_static_data Coverage Results" MODIFIED="1731491952900" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/weather_history" />
+    <SUITE FILE_PATH="coverage/email_digest$imputation.coverage" NAME="imputation Coverage Results" MODIFIED="1772721281471" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/adblocker_ML/handle data" />
     <SUITE FILE_PATH="coverage/email_digest$Doctests_in_validation.coverage" NAME="Doctests in validation Coverage Results" MODIFIED="1732202569257" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../AppData/Local/Packages/PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0/LocalCache/local-packages/Python311/site-packages/sklearn/utils" />
+    <SUITE FILE_PATH="coverage/email_digest$get_data_1.coverage" NAME="get_data_1 Coverage Results" MODIFIED="1772718427010" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/adblocker_ML/2026" />
     <SUITE FILE_PATH="coverage/email_digest$read.coverage" NAME="read Coverage Results" MODIFIED="1731922924900" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/computer_vision" />
+    <SUITE FILE_PATH="coverage/email_digest$trainer_drop_2cols.coverage" NAME="trainer_drop_2cols Coverage Results" MODIFIED="1772727226226" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/adblocker_ML/2026" />
     <SUITE FILE_PATH="coverage/email_digest$trainer.coverage" NAME="trainer Coverage Results" MODIFIED="1772630697815" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/adblocker_ML/2026" />
     <SUITE FILE_PATH="coverage/email_digest$main__2_.coverage" NAME="main (2) Coverage Results" MODIFIED="1765160922876" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/stock_crawler" />
     <SUITE FILE_PATH="coverage/email_digest$.coverage" NAME=" Coverage Results" MODIFIED="1732202978482" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/web_scrapping" />
     <SUITE FILE_PATH="coverage/email_digest$astro_api.coverage" NAME="astro_api Coverage Results" MODIFIED="1731318305618" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-  </component>
-  <component name="github-copilot-workspace">
-    <instructionFileLocations>
-      <option value=".github/instructions" />
-    </instructionFileLocations>
-    <promptFileLocations>
-      <option value=".github/prompts" />
-    </promptFileLocations>
   </component>
 </project>
