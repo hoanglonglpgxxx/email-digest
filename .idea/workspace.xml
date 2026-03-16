@@ -2,25 +2,66 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9ae9bc3f-0128-4e57-8c8a-e52c515740b1" name="Changes" comment="upupupupupupup">
-      <change beforePath="$PROJECT_DIR$/adblocker_ML/cross_validation_report.csv" beforeDir="false" afterPath="$PROJECT_DIR$/adblocker_ML/cross_validation_report.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adblocker_ML/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/adblocker_ML/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adblocker_ML/original_dataset.joblib" beforeDir="false" afterPath="$PROJECT_DIR$/adblocker_ML/original_dataset.joblib" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/final_adblocker/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/final_adblocker/adblocker_demo.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/final_adblocker/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CopilotPersistence">
+    <persistenceIdMap>
+      <entry key="_C:/Users/DELL/email-digest" value="3B11P4fsubWZ1Edj4Kiu1CBqz9c" />
+    </persistenceIdMap>
+  </component>
+  <component name="CopilotUserSelectedModel">
+    <selectedModels>
+      <entry key="chat-panel" value="GPT-5.1-Codex-Max" />
+      <entry key="agent-panel" value="GPT-5.1-Codex-Max" />
+    </selectedModels>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;hoanglonglpgxxx&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/hoanglonglpgxxx/email-digest.git&quot;,
+    &quot;accountId&quot;: &quot;417749e1-1446-4df7-a769-44dbe1984c4e&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="3B11P4fsubWZ1Edj4Kiu1CBqz9c" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Python.main.executor": "Run",
-    "git-widget-placeholder": "preprod"
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "ai.playground.ignore.import.keys.banner.in.settings": "true",
+    "git-widget-placeholder": "preprod",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RunManager">
@@ -54,8 +95,29 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-PY-253.31033.139" />
+        <option value="bundled-python-sdk-2653e85de345-6d6dccd035ac-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-253.31033.139" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9ae9bc3f-0128-4e57-8c8a-e52c515740b1" name="Changes" comment="upupupupupupup" />
+      <created>1773641740909</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1773641740909</updated>
+      <workItem from="1773641742833" duration="299000" />
+      <workItem from="1773642090878" duration="238000" />
+      <workItem from="1773642360593" duration="1281000" />
+    </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/email_digest$get_data_2.coverage" NAME="get_data_2 Coverage Results" MODIFIED="1772718590560" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/adblocker_ML/2026" />
@@ -92,5 +154,13 @@
     <SUITE FILE_PATH="coverage/email_digest$main__2_.coverage" NAME="main (2) Coverage Results" MODIFIED="1765160922876" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/stock_crawler" />
     <SUITE FILE_PATH="coverage/email_digest$.coverage" NAME=" Coverage Results" MODIFIED="1732202978482" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/web_scrapping" />
     <SUITE FILE_PATH="coverage/email_digest$astro_api.coverage" NAME="astro_api Coverage Results" MODIFIED="1731318305618" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+  <component name="github-copilot-workspace">
+    <instructionFileLocations>
+      <option value=".github/instructions" />
+    </instructionFileLocations>
+    <promptFileLocations>
+      <option value=".github/prompts" />
+    </promptFileLocations>
   </component>
 </project>
