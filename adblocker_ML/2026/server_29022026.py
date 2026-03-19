@@ -5,27 +5,24 @@ import pandas as pd
 
 app = FastAPI()
 
-# Cho phép Extension truy cập vào API
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
-    allow_credentials=True,  # Bật thêm cái này cho an toàn
+    allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
-# Load model bạn đã train (Mô hình 3 tối ưu)
-data = joblib.load('model_graph_optimized.joblib')
+# data = joblib.load('../../final_adblocker/dataset3/model3_final.joblib')
+data = joblib.load('../../final_adblocker/dataset3/demo3.joblib')
 model = data['model']
 features = data['features']
 
 
 @app.post("/predict")
 async def predict(request: Request):
-    # Dùng await request.json() để parse body trực tiếp, tránh lỗi 422 của FastAPI
     req = await request.json()
 
-    # In ra Terminal để xác nhận Server ĐÃ NHẬN ĐƯỢC DATA từ Extension
     print("\n[+] Đã nhận request từ Extension:", req)
 
     # Tính toán 2 đặc trưng mới ngay tại Server (Chuẩn xác!)
@@ -37,7 +34,6 @@ async def predict(request: Request):
     df = df.reindex(columns=features, fill_value=0)
     probs = model.predict_proba(df)
 
-    # Truy cập: [Hàng đầu tiên][Cột thứ hai (Nhãn 1)]
     prob = probs[0][1]
 
     # Áp dụng ngưỡng (Threshold) để giảm tỷ lệ chặn nhầm (False Positive)

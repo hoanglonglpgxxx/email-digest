@@ -82,7 +82,7 @@ window.addEventListener('click', (e) => {
 
         chrome.runtime.sendMessage({ action: "predict_ad", data: features }, (response) => {
             if (response?.success) {
-                const status = response.data.is_ad ? "🛑 QUẢNG CÁO" : "✅ SẠCH";
+                const status = response.data.is_ad ? "QUẢNG CÁO" : "SẠCH";
                 alert(`\nKết quả: ${status}\nXác suất: ${(response.data.probability * 100).toFixed(2)}%\nURL xử lý: ${url.substring(0, 50)}...`);
             } else {
                 alert("Lỗi kết nối Server AI Local!");
@@ -163,7 +163,6 @@ function analyzeElement(el) {
 
 // Khởi chạy quét ban đầu
 window.addEventListener('load', () => {
-    console.log("🚀 Bắt đầu quét tự động toàn bộ trang...");
     const elements = document.querySelectorAll('img, iframe');
     elements.forEach(analyzeElement);
 });
