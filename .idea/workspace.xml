@@ -5,22 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1a0bb982-edb8-48b8-92e7-487c6908fde0" name="Changes" comment="upupupupupupup">
-      <change afterPath="$PROJECT_DIR$/final_adblocker/dataset2/dataset_01032026.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/final_adblocker/dataset2/trainer2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/final_adblocker/dataset3/dataset_01032026.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/final_adblocker/dataset3/dataset_hybrid_2026_advanced.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/final_adblocker/dataset3/trainer_drop_2cols.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/final_adblocker/note_code.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adblocker_ML/2026/trainer3.py" beforeDir="false" afterPath="$PROJECT_DIR$/adblocker_ML/2026/trainer2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/final_adblocker/ad.DOCUMENTATION" beforeDir="false" afterPath="$PROJECT_DIR$/final_adblocker/dataset1/ad.DOCUMENTATION" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/final_adblocker/ad.data" beforeDir="false" afterPath="$PROJECT_DIR$/final_adblocker/dataset1/ad.data" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/final_adblocker/ad.names" beforeDir="false" afterPath="$PROJECT_DIR$/final_adblocker/dataset1/ad.names" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/final_adblocker/adblocker_demo.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/final_adblocker/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/final_adblocker/dataset1/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/final_adblocker/original_dataset.joblib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/final_adblocker/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/final_adblocker/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/final_adblocker/trainer.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/final_adblocker/dataset2/demo2.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/final_adblocker/dataset2/demo2.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final_adblocker/dataset3/demo3.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/final_adblocker/dataset3/demo3.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final_adblocker/dataset3/demo3.joblib" beforeDir="false" afterPath="$PROJECT_DIR$/final_adblocker/dataset3/demo3.joblib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final_adblocker/dataset3/model3_confusion_matrix.png" beforeDir="false" afterPath="$PROJECT_DIR$/final_adblocker/dataset3/model3_confusion_matrix.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final_adblocker/dataset3/model3_cv_scores.png" beforeDir="false" afterPath="$PROJECT_DIR$/final_adblocker/dataset3/model3_cv_scores.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final_adblocker/dataset3/model3_feature_importance.png" beforeDir="false" afterPath="$PROJECT_DIR$/final_adblocker/dataset3/model3_feature_importance.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final_adblocker/note_code.md" beforeDir="false" afterPath="$PROJECT_DIR$/final_adblocker/note_code.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,74 +81,74 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "HTTP Request.All in generated-requests.executor": "Run",
-    "JavaScript Debug.index.html.executor": "Run",
-    "Python tests.Doctests in __init__.executor": "Run",
-    "Python tests.Doctests in validation.executor": "Run",
-    "Python tests.Python tests in test.py.executor": "Run",
-    "Python.__init__.executor": "Run",
-    "Python.astro_api.executor": "Run",
-    "Python.checkdata.executor": "Run",
-    "Python.data_handling.executor": "Run",
-    "Python.dbscan.executor": "Run",
-    "Python.face_recog.executor": "Run",
-    "Python.file_converter.executor": "Run",
-    "Python.get_data_1.executor": "Run",
-    "Python.get_data_2.executor": "Run",
-    "Python.get_data_3.executor": "Run",
-    "Python.get_response.executor": "Debug",
-    "Python.handle_static_data.executor": "Run",
-    "Python.hotel.executor": "Run",
-    "Python.imputation.executor": "Run",
-    "Python.kmeans (1).executor": "Run",
-    "Python.latest_trainer.executor": "Run",
-    "Python.main (1).executor": "Run",
-    "Python.main (2).executor": "Run",
-    "Python.main (3).executor": "Run",
-    "Python.main.executor": "Run",
-    "Python.new_trainer.executor": "Run",
-    "Python.pre_handle.executor": "Run",
-    "Python.predict.executor": "Run",
-    "Python.predict_modern.executor": "Run",
-    "Python.read.executor": "Run",
-    "Python.remove_blank_data.executor": "Run",
-    "Python.rophim.executor": "Run",
-    "Python.samp.executor": "Run",
-    "Python.send_email.executor": "Run",
-    "Python.server.executor": "Run",
-    "Python.server_29022026 (1).executor": "Run",
-    "Python.server_29022026.executor": "Run",
-    "Python.test.executor": "Run",
-    "Python.test_latest.executor": "Run",
-    "Python.train_url_only.executor": "Run",
-    "Python.trainer.executor": "Run",
-    "Python.trainer3.executor": "Run",
-    "Python.trainer_drop_2cols.executor": "Run",
-    "Python.trainer_v8.executor": "Run",
-    "Python.weather_forecast.executor": "Run",
-    "Python.weather_history.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "ai.playground.ignore.import.keys.banner.in.settings": "true",
-    "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "preprod",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/hoang/PycharmProjects/email-digest/final_adblocker/dataset2",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.fileTypes",
-    "ts.external.directory.path": "E:\\PyCharm 2025.3.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;HTTP Request.All in generated-requests.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.index.html.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Doctests in __init__.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Doctests in validation.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in test.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python.__init__.executor&quot;: &quot;Run&quot;,
+    &quot;Python.astro_api.executor&quot;: &quot;Run&quot;,
+    &quot;Python.checkdata.executor&quot;: &quot;Run&quot;,
+    &quot;Python.data_handling.executor&quot;: &quot;Run&quot;,
+    &quot;Python.dbscan.executor&quot;: &quot;Run&quot;,
+    &quot;Python.face_recog.executor&quot;: &quot;Run&quot;,
+    &quot;Python.file_converter.executor&quot;: &quot;Run&quot;,
+    &quot;Python.get_data_1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.get_data_2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.get_data_3.executor&quot;: &quot;Run&quot;,
+    &quot;Python.get_response.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.handle_static_data.executor&quot;: &quot;Run&quot;,
+    &quot;Python.hotel.executor&quot;: &quot;Run&quot;,
+    &quot;Python.imputation.executor&quot;: &quot;Run&quot;,
+    &quot;Python.kmeans (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.latest_trainer.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.main (2).executor&quot;: &quot;Run&quot;,
+    &quot;Python.main (3).executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.new_trainer.executor&quot;: &quot;Run&quot;,
+    &quot;Python.pre_handle.executor&quot;: &quot;Run&quot;,
+    &quot;Python.predict.executor&quot;: &quot;Run&quot;,
+    &quot;Python.predict_modern.executor&quot;: &quot;Run&quot;,
+    &quot;Python.read.executor&quot;: &quot;Run&quot;,
+    &quot;Python.remove_blank_data.executor&quot;: &quot;Run&quot;,
+    &quot;Python.rophim.executor&quot;: &quot;Run&quot;,
+    &quot;Python.samp.executor&quot;: &quot;Run&quot;,
+    &quot;Python.send_email.executor&quot;: &quot;Run&quot;,
+    &quot;Python.server.executor&quot;: &quot;Run&quot;,
+    &quot;Python.server_29022026 (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.server_29022026.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test_latest.executor&quot;: &quot;Run&quot;,
+    &quot;Python.train_url_only.executor&quot;: &quot;Run&quot;,
+    &quot;Python.trainer.executor&quot;: &quot;Run&quot;,
+    &quot;Python.trainer3.executor&quot;: &quot;Run&quot;,
+    &quot;Python.trainer_drop_2cols.executor&quot;: &quot;Run&quot;,
+    &quot;Python.trainer_v8.executor&quot;: &quot;Run&quot;,
+    &quot;Python.weather_forecast.executor&quot;: &quot;Run&quot;,
+    &quot;Python.weather_history.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;ai.playground.ignore.import.keys.banner.in.settings&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;preprod&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/hoang/PycharmProjects/email-digest/final_adblocker/dataset2&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.fileTypes&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;E:\\PyCharm 2025.3.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\hoang\PycharmProjects\email-digest\final_adblocker\dataset2" />
@@ -376,6 +368,9 @@
       <workItem from="1772637481206" duration="225000" />
       <workItem from="1772714885939" duration="12359000" />
       <workItem from="1773674248767" duration="2738000" />
+      <workItem from="1773753769179" duration="1566000" />
+      <workItem from="1773838768085" duration="3521000" />
+      <workItem from="1773928656700" duration="729000" />
     </task>
     <task id="LOCAL-00001" summary="upupup">
       <option name="closed" value="true" />

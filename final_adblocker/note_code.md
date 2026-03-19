@@ -6,5 +6,6 @@ jupyter nbconvert --to notebook --execute adblocker_demo.ran.ipynb --output adbl
 
 
 jupyter notebook
+python -m notebook
 
 python -m ipykernel install --user --name email-digest --display-name "Python (email-digest)"
