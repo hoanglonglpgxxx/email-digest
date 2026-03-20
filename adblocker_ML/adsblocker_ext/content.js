@@ -1,6 +1,3 @@
-// ==============================================================================
-// 1. CÁC HÀM TÍNH TOÁN ĐẶC TRƯNG
-// ==============================================================================
 const getDepth = el => {
     let depth = 0;
     while (el.parentNode) { el = el.parentNode; depth++; }
@@ -51,13 +48,8 @@ const isInsideIframe = (el) => {
     return (el.tagName === 'IFRAME' || el.closest('iframe') !== null || window.self !== window.top) ? 1 : 0;
 };
 
-// ==============================================================================
-// 2. SỰ KIỆN AUDIT (Alt + Click) - ĐÃ SỬA THÀNH 'click'
-// ==============================================================================
-// Chuyển từ 'mousedown' sang 'click' để triệt tiêu hoàn toàn hành vi mở link
 window.addEventListener('click', (e) => {
     if (e.altKey) {
-        // Chặn tuyệt đối mọi hành vi mặc định của trình duyệt
         e.preventDefault();
         e.stopPropagation();
         e.stopImmediatePropagation();
@@ -89,11 +81,8 @@ window.addEventListener('click', (e) => {
             }
         });
     }
-}, true); // UseCapture = true để bắt sự kiện sớm nhất
+}, true);
 
-// ==============================================================================
-// 3. TỰ ĐỘNG QUÉT (Auto-Scan) & HIỂN THỊ KHỐI CHẶN TRỰC QUAN (ABSOLUTE OVERLAY)
-// ==============================================================================
 function analyzeElement(el) {
     const url = getEffectiveUrl(el);
     if (!url || url.startsWith("data:")) return;
@@ -123,20 +112,18 @@ function analyzeElement(el) {
                 const currentWidth = rect.width > 0 ? rect.width + 'px' : '100%';
                 const currentHeight = rect.height > 0 ? rect.height + 'px' : '100%';
 
-                // Đảm bảo thẻ cha có position relative để làm hệ quy chiếu cho khối absolute
+                // Đảm bảo thẻ cha có position relative cho khối absolute
                 const computedStyle = window.getComputedStyle(targetToBlock);
                 if (computedStyle.position === 'static') {
                     targetToBlock.style.setProperty('position', 'relative', 'important');
                 }
 
-                // Giữ nguyên kích thước container để không làm vỡ layout (tránh hiện tượng giật trang)
+                // Giữ nguyên kích thước container để không làm vỡ layout
                 targetToBlock.style.setProperty('min-width', currentWidth, 'important');
                 targetToBlock.style.setProperty('min-height', currentHeight, 'important');
 
-                // Xóa nội dung gốc
                 targetToBlock.innerHTML = '';
 
-                // Bơm lớp lưới (Overlay) Absolute phủ kín hoàn toàn không gian gốc
                 const overlay = document.createElement('div');
                 overlay.style.cssText = `
                     position: absolute !important;
@@ -161,13 +148,6 @@ function analyzeElement(el) {
     });
 }
 
-// Khởi chạy quét ban đầu
-window.addEventListener('load', () => {
-    const elements = document.querySelectorAll('img, iframe');
-    elements.forEach(analyzeElement);
-});
-
-// Quan sát DOM thay đổi
 const observer = new MutationObserver((mutations) => {
     mutations.forEach((mutation) => {
         mutation.addedNodes.forEach((node) => {

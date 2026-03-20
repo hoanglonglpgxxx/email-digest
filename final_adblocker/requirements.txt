@@ -1,9 +1,0 @@
-numpy
-pandas
-seaborn
-matplotlib
-scikit-learn
-joblib
-jupyter
-nbconvert
-ipykernel

@@ -40,23 +40,3 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
         return true;
     }
 });
-
-// Lắng nghe sự kiện mạng để phân tích bằng mô hình ONNX (Network Layer)
-chrome.webRequest.onBeforeRequest.addListener(
-    (details) => {
-        if (["image", "sub_frame", "script"].includes(details.type)) {
-            const url = details.url;
-            if (url.startsWith("data:")) return;
-
-            const netFeatures = {
-                url_length: url.length,
-                entropy: getEntropy(url),
-                num_special_chars: countSpecialChars(url),
-                is_3rd_party: isThirdParty(url, details.initiator)
-            };
-
-            console.log("[Network Layer] Đang phân tích URL:", url.substring(0, 50));
-        }
-    },
-    { urls: ["<all_urls>"] }
-);
