@@ -13,8 +13,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# data = joblib.load('../../final_adblocker/dataset3/model3_final.joblib')
-data = joblib.load('../../final_adblocker/dataset3/demo3.joblib')
+data = joblib.load('../../final_adblocker/dataset2/demo2.joblib')
 model = data['model']
 features = data['features']
 

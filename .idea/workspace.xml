@@ -6,20 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1a0bb982-edb8-48b8-92e7-487c6908fde0" name="Changes" comment="gegegasdas">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adblocker_ML/adsblocker_ext/background.js" beforeDir="false" afterPath="$PROJECT_DIR$/adblocker_ML/adsblocker_ext/background.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/final_adblocker/dataset1/demo1.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/final_adblocker/dataset1/demo1.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/final_adblocker/dataset1/model1_classification_report.png" beforeDir="false" afterPath="$PROJECT_DIR$/final_adblocker/dataset1/model1_classification_report.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/final_adblocker/dataset1/model1_confusion_matrix.png" beforeDir="false" afterPath="$PROJECT_DIR$/final_adblocker/dataset1/model1_confusion_matrix.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/final_adblocker/dataset1/model1_feature_importance.png" beforeDir="false" afterPath="$PROJECT_DIR$/final_adblocker/dataset1/model1_feature_importance.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/final_adblocker/dataset1/original_dataset.joblib" beforeDir="false" afterPath="$PROJECT_DIR$/final_adblocker/dataset1/original_dataset.joblib" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/final_adblocker/dataset2/demo2.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/final_adblocker/dataset2/demo2.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/final_adblocker/dataset3/dataset_hybrid_2026_advanced.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/final_adblocker/dataset3/demo3.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/final_adblocker/dataset3/demo3.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/final_adblocker/dataset3/demo3.joblib" beforeDir="false" afterPath="$PROJECT_DIR$/final_adblocker/dataset3/demo3.joblib" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/final_adblocker/dataset3/model3_cv_scores.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/final_adblocker/dataset3/model3_feature_importance.png" beforeDir="false" afterPath="$PROJECT_DIR$/final_adblocker/dataset3/model3_feature_importance.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/final_adblocker/dataset3/model3_final.joblib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/final_adblocker/dataset3/model3_real_evaluation.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/adblocker_ML/2026/server_29022026.py" beforeDir="false" afterPath="$PROJECT_DIR$/adblocker_ML/2026/server_29022026.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,11 +152,11 @@
       <recent name="F:\email-digest" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\hoang\PycharmProjects\email-digest\nlp_diary" />
       <recent name="C:\Users\hoang\PycharmProjects\email-digest\final_adblocker\dataset1" />
       <recent name="C:\Users\hoang\PycharmProjects\email-digest\final_adblocker\dataset3" />
       <recent name="C:\Users\hoang\PycharmProjects\email-digest\final_adblocker\dataset2" />
       <recent name="C:\Users\hoang\PycharmProjects\email-digest\adblocker_ML\2026" />
-      <recent name="C:\Users\hoang\PycharmProjects\email-digest\adblocker_ML" />
     </key>
   </component>
   <component name="RunManager" selected="Python.server_29022026">
@@ -378,7 +365,7 @@
       <workItem from="1773753769179" duration="1566000" />
       <workItem from="1773838768085" duration="3521000" />
       <workItem from="1773928656700" duration="9974000" />
-      <workItem from="1773997459315" duration="7512000" />
+      <workItem from="1773997459315" duration="8030000" />
     </task>
     <task id="LOCAL-00001" summary="upupup">
       <option name="closed" value="true" />
@@ -524,7 +511,23 @@
       <option name="project" value="LOCAL" />
       <updated>1773939633670</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="gegegasdas">
+      <option name="closed" value="true" />
+      <created>1774021718094</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1774021718094</updated>
+    </task>
+    <task id="LOCAL-00020" summary="gegegasdas">
+      <option name="closed" value="true" />
+      <created>1774021906178</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1774021906178</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
