@@ -1,8 +1,3 @@
-// ==============================================================================
-// 1. CÁC HÀM PHỤ TRỢ (BẮT BUỘC PHẢI CÓ TRONG BACKGROUND.JS)
-// ==============================================================================
-
-// Hàm tính toán Entropy để nhận diện DGA hoặc URL làm rối
 function getEntropy(str) {
     if (!str) return 0;
     const len = str.length;
@@ -16,14 +11,12 @@ function getEntropy(str) {
     return entropy;
 }
 
-// Hàm đếm ký tự đặc biệt để đánh giá độ phức tạp URL
 function countSpecialChars(str) {
     if (!str) return 0;
     const specialChars = str.match(/[^a-zA-Z0-9]/g);
     return specialChars ? specialChars.length : 0;
 }
 
-// Hàm kiểm tra Third-party dựa trên Domain gốc
 function isThirdParty(url, initiator) {
     try {
         if (!initiator) return 1;
@@ -33,13 +26,8 @@ function isThirdParty(url, initiator) {
     } catch (e) { return 0; }
 }
 
-// ==============================================================================
-// 2. LẮNG NGHE YÊU CẦU VÀ GIAO TIẾP API
-// ==============================================================================
-
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     if (request.action === "predict_ad") {
-        // Background đóng vai trò Proxy để vượt rào cản CORS/Mixed Content
         fetch("http://127.0.0.1:8000/predict", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
@@ -49,7 +37,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
         .then(data => sendResponse({ success: true, data: data }))
         .catch(err => sendResponse({ success: false, error: err.message }));
 
-        return true; // Giữ kênh giao tiếp bất đồng bộ
+        return true;
     }
 });
 
@@ -60,7 +48,6 @@ chrome.webRequest.onBeforeRequest.addListener(
             const url = details.url;
             if (url.startsWith("data:")) return;
 
-            // Tại đây getEntropy đã được định nghĩa và có thể sử dụng
             const netFeatures = {
                 url_length: url.length,
                 entropy: getEntropy(url),
@@ -69,7 +56,6 @@ chrome.webRequest.onBeforeRequest.addListener(
             };
 
             console.log("[Network Layer] Đang phân tích URL:", url.substring(0, 50));
-            // Tiến trình gọi Offscreen document để chạy ONNX...
         }
     },
     { urls: ["<all_urls>"] }
